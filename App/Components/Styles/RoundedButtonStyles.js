@@ -16,5 +16,10 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     fontSize: Fonts.size.medium,
     marginVertical: Metrics.baseMargin
+  },
+  buttonLaunch: {
+    margin: Metrics.smallMargin * 3,
+    padding: Metrics.smallMargin * 3,
+    backgroundColor: Colors.blue
   }
 })

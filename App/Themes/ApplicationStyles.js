@@ -9,8 +9,7 @@ const ApplicationStyles = {
   screen: {
     mainContainer: {
       flex: 1,
-      backgroundColor: Colors.background,
-      borderTopWidth: 1
+      backgroundColor: Colors.background
     },
     backgroundImage: {
       position: 'absolute',
@@ -32,6 +31,9 @@ const ApplicationStyles = {
     halfSection: {
       flex: 0.5,
       padding: Metrics.baseMargin
+    },
+    halfSectionPan: {
+      flex: 0.5
     },
     sectionText: {
       ...Fonts.style.small,

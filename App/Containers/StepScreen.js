@@ -14,8 +14,10 @@ import Video from '../Components/Video'
 class StepScreen extends React.Component {
   constructor (props) {
     super(props)
+
     this.state = {
-      showModal: false
+      showModal: false,
+      currentDataByStep: dataGame.steps[this.props.count]
     }
   }
 
@@ -25,8 +27,11 @@ class StepScreen extends React.Component {
 
   render () {
     const { navigate } = this.props.navigation
-    const currentDataByStep = dataGame.steps[this.props.count]
+    const currentDataByStep = this.state.currentDataByStep
     const namevideo = 'videotest'
+
+    // Is last screen ?
+    const lastStep = ((dataGame.steps.length - 1) === this.props.count)
 
     return (
       <View style={styles.mainContainer}>
@@ -55,7 +60,8 @@ class StepScreen extends React.Component {
             <RoundedButton
               text='Continuer'
               onPress={() => {
-                navigate('OriantationScreen')
+                if (lastStep) navigate('EndScreen')
+                else navigate('OriantationScreen')
                 this.props.increment()
               }}
             />

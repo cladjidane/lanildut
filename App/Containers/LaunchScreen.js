@@ -1,5 +1,5 @@
 import React from 'react'
-import { ScrollView, Text, View, Image } from 'react-native'
+import { Text, View, Image } from 'react-native'
 
 // Styles
 import styles from './Styles/LaunchScreenStyles'
@@ -11,29 +11,28 @@ export default class LaunchScreen extends React.Component {
   render () {
     const { navigate } = this.props.navigation
     return (
-      <View style={styles.mainContainer}>
-        <ScrollView style={styles.container}>
+      <View style={styles.container}>
+        <View style={styles.halfSectionPan} >
 
-          <View style={styles.halfSection} >
+          <Text style={styles.titleTextHome}>LANILDUT</Text>
+          <Text style={styles.subtitleHome}>Parcours découverte</Text>
+          <Text style={styles.subtitleHome_breizh}>Pourmenadenn dizoleiñ</Text>
+          <Text style={styles.sectionTextHome}>
+            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </Text>
 
-            <Text style={styles.titleText}>Lanildut</Text>
-            <Text style={styles.subtitle}>Lanildut</Text>
-            <Text style={styles.sectionText}>
-              Intro ...
-            </Text>
+          <RoundedButton
+            text='Commencer'
+            style={styles.buttonLaunch}
+            onPress={() => {
+              navigate('OriantationScreen')
+            }}
+          />
+        </View>
 
-            <RoundedButton
-              text='Commencer'
-              onPress={() => {
-                navigate('OriantationScreen')
-              }}
-            />
-          </View>
-
-          <View style={styles.containerMedia} >
-            <Image resizeMode='cover' source={require('../Images/game/thumbs-step2.jpg')} />
-          </View>
-        </ScrollView>
+        <Image style={styles.imageMediaHome} resizeMode='cover' source={require('../Images/game/thumbs-step2.jpg')}>
+          <View style={styles.viewMediaHome} />
+        </Image>
       </View>
     )
   }
