@@ -22,7 +22,6 @@ const api = DebugConfig.useFixtures ? FixtureAPI : API.create()
 /* ------------- Connect Types To Sagas ------------- */
 
 export default function * root () {
-
   yield [
     // On doit lancer la fn startup du sous comp sagas StartupSagas.js
     takeLatest(StartupTypes.STARTUP, startup),

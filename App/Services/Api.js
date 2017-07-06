@@ -2,7 +2,7 @@
 import apisauce from 'apisauce'
 
 // our "constructor"
-//const create = (baseURL = 'https://www.koality.fr/wp-json/wp/v2/') => {
+// const create = (baseURL = 'https://www.koality.fr/wp-json/wp/v2/') => {
 const create = (baseURL = 'https://www.koality.fr/wp-content/uploads/2017/07/game.json') => {
   // ------
   // STEP 1
@@ -36,7 +36,7 @@ const create = (baseURL = 'https://www.koality.fr/wp-content/uploads/2017/07/gam
   // way at this level.
   //
   const getGame = () => {
-    const r = api.get() 
+    const r = api.get()
     return r
   }
 

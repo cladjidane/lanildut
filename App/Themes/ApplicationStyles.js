@@ -25,11 +25,12 @@ const ApplicationStyles = {
       backgroundColor: Colors.background
     },
     section: {
+      flex: 1,
       margin: Metrics.section,
       padding: Metrics.baseMargin
     },
     halfSection: {
-      flex: .5,
+      flex: 0.5,
       padding: Metrics.baseMargin
     },
     sectionText: {
@@ -40,20 +41,35 @@ const ApplicationStyles = {
       paddingHorizontal: Metrics.doubleBaseMargin,
       textAlign: 'center'
     },
-    subtitle: {
+    sectionText_left: {
+      ...Fonts.style.small,
+      paddingVertical: Metrics.doubleBaseMargin,
       color: Colors.text,
+      marginVertical: Metrics.smallMargin,
+      paddingHorizontal: Metrics.doubleBaseMargin,
+      textAlign: 'justify'
+    },
+    subtitle: {
+      color: Colors.snow,
       padding: Metrics.smallMargin,
-      marginBottom: Metrics.smallMargin,
-      marginHorizontal: Metrics.smallMargin,
-      textAlign: 'center'
+      textAlign: 'center',
+      fontSize: 12
     },
     titleText: {
       ...Fonts.style.h2,
-      fontSize:24,
+      fontSize: 24,
       color: Colors.textBlack,
       textAlign: 'center',
       margin: Metrics.smallMargin,
       marginTop: Metrics.doubleBaseMargin
+    },
+    titleText_breizh: {
+      ...Fonts.style.h2,
+      fontSize: 20,
+      textAlign: 'center',
+      margin: Metrics.tinyMargin,
+      marginTop: Metrics.BaseMargin,
+      color: Colors.red
     }
   },
   darkLabelContainer: {

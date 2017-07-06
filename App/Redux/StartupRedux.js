@@ -20,14 +20,7 @@ export const INITIAL_STATE = Immutable({
 
 // request the data from an api
 export const go = (state, { data }) => {
-  r = state.merge({ startup: true })
-  console.tron.display({
-    name: '🔥 Startup OVERRIDE.js - go 🔥',
-    value: {
-      startup
-    }
-  })
-  return r
+  return state.merge({ startup: true })
 }
 
 /* ------------- Hookup Reducers To Types ------------- */
@@ -35,4 +28,3 @@ export const go = (state, { data }) => {
 export const reducer = createReducer(INITIAL_STATE, {
   [Types.STARTUP]: go
 })
-

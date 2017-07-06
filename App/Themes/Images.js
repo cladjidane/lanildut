@@ -1,5 +1,15 @@
 // leave off @2x/@3x
 const images = {
+  thumbs: [
+    { th: require('../Images/game/thumbs-step1.jpg') },
+    { th: require('../Images/game/thumbs-step2.jpg') },
+    { th: require('../Images/game/thumbs-step1.jpg') },
+    { th: require('../Images/game/thumbs-step1.jpg') }
+  ],
+  videos: {
+    video1: require('../Fixtures/broadchurch.mp4'),
+    videotest: require('../Fixtures/broadchurch.mp4')
+  },
   logo: require('../Images/ir.png'),
   clearLogo: require('../Images/top_logo.png'),
   launch: require('../Images/launch-icon.png'),

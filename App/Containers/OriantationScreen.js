@@ -1,8 +1,7 @@
 import React from 'react'
-import { TouchableHighlight, View, ScrollView, Text, TouchableOpacity, Image, Modal } from 'react-native'
+import { View, ScrollView, Text, TouchableOpacity, Modal } from 'react-native'
 import { connect } from 'react-redux'
-import { Images } from '../Themes'
-import { StackNavigator } from 'react-navigation'
+import Icon from 'react-native-vector-icons/FontAwesome'
 // Add Actions - replace 'Your' with whatever your reducer is called :)
 // import YourActions from '../Redux/YourRedux'
 
@@ -11,83 +10,108 @@ import styles from './Styles/OriantationScreenStyle'
 
 // Components
 import RoundedButton from '../Components/RoundedButton'
-import FullButton from '../Components/FullButton'
-import ListviewSectionsExample from './ignite-ir-boilerplate/SectionExample'
 import dataGame from '../Fixtures/game.json'
-
+import StaticMap from '../Components/StaticMap'
+import IconButton from '../Components/IconButton'
 
 class OriantationScreen extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      showModal: false
+      showModal: false,
+      contentModal: {},
+      currentDataByStep: dataGame.steps[this.props.count]
     }
-    var currentDataByStep = dataGame.step[props.count]
-
-    const p = this.props
   }
 
   toggleModal = () => {
     this.setState({ showModal: !this.state.showModal })
   }
-  
-  componentDidMount() {
-    this.props.increment()
+
+  onPressForModalTip = () => {
+    this.setState({
+      contentModal: this.state.currentDataByStep.orientation.infos.tip,
+      showModal: true
+    })
+  }
+
+  onPressForModalTime = () => {
+    this.setState({
+      contentModal: this.state.currentDataByStep.orientation.infos.time,
+      showModal: true
+    })
+  }
+
+  onPressForModalHardness = () => {
+    this.setState({
+      contentModal: this.state.currentDataByStep.orientation.infos.hardness,
+      showModal: true
+    })
   }
 
   render () {
     const { navigate } = this.props.navigation
-    const currentDataByStep = dataGame.step[this.props.count]
-    //const { count } = this.props.game
+    // console.tron.log(dataGame.steps[this.props.count])
+    // const { count } = this.props.game
     return (
       <View style={styles.mainContainer}>
-        <ScrollView contentContainerStyle={styles.container}>
-          <View style={styles.containerMap} >
-            <View style={styles.map} >
-              <Text>///</Text>
-            </View>
+        <ScrollView style={styles.container}>
+          <View style={styles.wrapperMap} >
+            <StaticMap lat={this.state.currentDataByStep.orientation.lat} lng={this.state.currentDataByStep.orientation.lng} />
+            <Text style={styles.subtitle}>ETAPE : {this.props.count + 1}</Text>
           </View>
 
           <View style={styles.halfSection} >
-            <Text style={styles.titleText}>{currentDataByStep.title}</Text>
-            <Text style={styles.subtitle}>ETAPE : {this.props.count}</Text>
-            <Text style={styles.sectionText}>{currentDataByStep.desc}</Text>
+            <Text style={styles.titleText}>{this.state.currentDataByStep.orientation.texts.title}</Text>
+            <Text style={styles.titleText_breizh}>Ar Fourn soud</Text>
+            <Text style={styles.sectionText}>{this.state.currentDataByStep.orientation.texts.desc}</Text>
+
+            <View style={styles.infos}>
+              <IconButton
+                icon='present'
+                text='Durée'
+                onPress={this.onPressForModalTime}
+              />
+              <IconButton
+                icon='bulb'
+                text='Conseils'
+                onPress={this.onPressForModalTip}
+              />
+              <IconButton
+                icon='note'
+                text='Infos'
+                onPress={this.onPressForModalHardness}
+              />
+            </View>
 
             <RoundedButton
               text="J'y SUIS !"
               onPress={() => navigate('StepScreen')}
             />
 
-            {/*
-            <DrawerButton
-              text='Example left drawer button'
-              onPress={() => navigate('StepScreen')}
-            />
-            <TouchableHighlight onPress={this.toggleModal}>
-              <Text>Show Modal</Text>
-            </TouchableHighlight>
-
-            <ListviewSectionsExample />
-            
-            <Modal
-              animationType={"fade"}
-              transparent={false}
-              visible={this.state.showModal}
-              onRequestClose={this.toggleModal}
-              >
-              <View style={{marginTop: 22}}>
-                <View>
-                  <Text>Hello World!</Text>
-                </View>
-              </View>
-
-              <TouchableOpacity onPress={this.toggleModal} >
-                <Image source={Images.closeButton} />
-              </TouchableOpacity>
-            </Modal>
-            */}
           </View>
-          
+
+          <Modal
+            transparent
+            visible={this.state.showModal}
+            onRequestClose={this.toggleModal}
+            >
+            <View
+              style={styles.modalInfos}>
+              <Text style={styles.titleText}>{this.state.contentModal.title}</Text>
+              <Text style={styles.sectionText}>{this.state.contentModal.text}</Text>
+            </View>
+
+            <TouchableOpacity
+              style={styles.closeModal}
+              onPress={this.toggleModal}
+            >
+              <View style={styles.closeModalView}>
+                <Icon name='times-circle' size={30} color='#f94d63' />
+              </View>
+            </TouchableOpacity>
+          </Modal>
+
         </ScrollView>
       </View>
     )
@@ -103,7 +127,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     increment: () => { dispatch({ type: 'INCREMENT' }) },
-    decrement: () => { dispatch({ type: 'DECREMENT' }) },
+    decrement: () => { dispatch({ type: 'DECREMENT' }) }
   }
 }
 

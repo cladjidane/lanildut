@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native'
-import {ApplicationStyles, Fonts, Metrics, Colors} from '../../Themes/'
+import {ApplicationStyles, Colors} from '../../Themes/'
 
 export default StyleSheet.create({
   ...ApplicationStyles.screen,
@@ -10,13 +10,14 @@ export default StyleSheet.create({
     zIndex: 10
   },
   containerMedia: {
-    flex: .5,
+    flex: 0.5,
     backgroundColor: Colors.red
   },
-  media: {
+  thumbs: {
+    flex: 1
+  },
+  modalVideo: {
     flex: 1,
-    backgroundColor: Colors.background,
-    margin: Metrics.section,
-    padding: Metrics.baseMargin
+    backgroundColor: 'red'
   }
 })

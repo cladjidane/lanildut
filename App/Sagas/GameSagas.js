@@ -14,7 +14,6 @@ import { call, put } from 'redux-saga/effects'
 import GameActions from '../Redux/GameRedux'
 
 export function * getGame (api, action) {
-
   console.tron.display({
     name: '🔥 GameSagas.js 🔥',
     preview: 'On lance la saga game',
