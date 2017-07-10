@@ -1,5 +1,17 @@
 /* http://www.gps-coordinates.org/ */
 {
+  "introduction": {
+    "name": "LANILDUT",
+    "title": "Parcours découverte",
+    "title_breton": "Pourmenadenn dizoleiñ",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis sodales mauris"
+  } ,
+  "end": {
+    "title": "Fin !",
+    "title_breton": "",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis sodales mauris",
+    "credits": "Cette balade découverte de Lanildut a été réalisée par Tydéo, entreprise spécialisée dans la prise de vue vidéo et le studio de développement web Koality et blablabla..."
+  },
   "steps": [
     {
       "orientation": {

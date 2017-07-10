@@ -5,8 +5,7 @@ export default StyleSheet.create({
   ...ApplicationStyles.screen,
   backButton: {
     position: 'absolute',
-    paddingTop: 30,
-    paddingHorizontal: 5,
+    paddingBottom: 5,
     zIndex: 10
   },
   containerMedia: {

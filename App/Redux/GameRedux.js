@@ -8,7 +8,8 @@ const { Types, Creators } = createActions({
   gameSuccess: ['game'],
   gameFailure: null,
   increment: null,
-  decrement: null
+  decrement: null,
+  resetGame: null
 })
 
 export const GameTypes = Types
@@ -52,6 +53,11 @@ export const decrement = (state, { action }) => {
   return state.merge({ count })
 }
 
+export const resetGame = (state, { action }) => {
+  const count = 0
+  return state.merge({ count })
+}
+
 /* ------------- Hookup Reducers To Types ------------- */
 
 export const reducer = createReducer(INITIAL_STATE, {
@@ -59,5 +65,6 @@ export const reducer = createReducer(INITIAL_STATE, {
   [Types.GAME_SUCCESS]: success,
   [Types.GAME_FAILURE]: failure,
   [Types.INCREMENT]: increment,
-  [Types.DECREMENT]: decrement
+  [Types.DECREMENT]: decrement,
+  [Types.RESET_GAME]: resetGame
 })

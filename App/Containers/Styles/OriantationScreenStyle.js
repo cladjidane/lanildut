@@ -7,7 +7,7 @@ export default StyleSheet.create({
     flex: 0.5,
     backgroundColor: Colors.red,
     padding: Metrics.doubleBaseMargin,
-    paddingTop: 30,
+    paddingTop: 10,
     paddingBottom: 0
   },
   bubble: {

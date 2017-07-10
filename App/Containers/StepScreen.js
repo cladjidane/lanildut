@@ -2,6 +2,8 @@ import React from 'react'
 import { Modal, View, ScrollView, Text, TouchableOpacity, Image } from 'react-native'
 import { connect } from 'react-redux'
 import { Images } from '../Themes'
+
+// Data
 import dataGame from '../Fixtures/game.json'
 
 // Styles
@@ -35,9 +37,6 @@ class StepScreen extends React.Component {
 
     return (
       <View style={styles.mainContainer}>
-        <TouchableOpacity onPress={() => this.props.navigation.goBack(null)} style={styles.backButton}>
-          <Image source={Images.backButton} />
-        </TouchableOpacity>
         <ScrollView style={styles.container}>
 
           <View style={styles.containerMedia} >
@@ -51,7 +50,7 @@ class StepScreen extends React.Component {
           <View style={styles.halfSection} >
 
             <Text style={styles.titleText}>{currentDataByStep.step.texts.title}</Text>
-            <Text style={styles.subtitle}>{currentDataByStep.step.texts.title_breton}</Text>
+            <Text style={styles.titleText_breizh}>{currentDataByStep.step.texts.title_breton}</Text>
             <Text style={styles.sectionText_left}>
               {currentDataByStep.step.texts.text}
               {/* currentDataByStep.step.text_plus */}
@@ -103,8 +102,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    increment: () => { dispatch({ type: 'INCREMENT' }) },
-    decrement: () => { dispatch({ type: 'DECREMENT' }) }
+    increment: () => { dispatch({ type: 'INCREMENT' }) }
+    // decrement: () => { dispatch({ type: 'DECREMENT' }) }
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(StepScreen)

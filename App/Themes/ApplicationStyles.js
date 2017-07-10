@@ -72,7 +72,25 @@ const ApplicationStyles = {
       margin: Metrics.tinyMargin,
       marginTop: Metrics.BaseMargin,
       color: Colors.red
+    },
+    // Credits
+    sectionCredits: {
+      flex: 1,
+      padding: Metrics.baseMargin,
+      marginHorizontal: Metrics.doubleBaseMargin * 2
+    },
+    sectionTextCredits: {
+      fontSize: 12,
+      textAlign: 'center',
+      color: Colors.snow,
+      padding: Metrics.baseMargin
+    },
+    separator: {
+      borderTopColor: Colors.snow,
+      borderTopWidth: 1,
+      margin: Metrics.baseMargin
     }
+    // End Credits
   },
   darkLabelContainer: {
     padding: Metrics.smallMargin,

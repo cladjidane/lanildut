@@ -1,15 +1,20 @@
 import React from 'react'
 import { ScrollView, Text, View, Image } from 'react-native'
 import { connect } from 'react-redux'
-// Add Actions - replace 'Your' with whatever your reducer is called :)
-// import YourActions from '../Redux/YourRedux'
+
+// Data
+import dataGame from '../Fixtures/game.json'
 
 // Styles
-import styles from './Styles/EndScreenStyle'
 import Images from '../Themes/Images'
+import styles from './Styles/EndScreenStyle'
+
+// Components
+import RoundedButton from '../Components/RoundedButton'
 
 class EndScreen extends React.Component {
   render () {
+    const { navigate } = this.props.navigation
     return (
       <View style={styles.mainContainer}>
         <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
@@ -19,11 +24,24 @@ class EndScreen extends React.Component {
           </View>
 
           <View style={styles.section} >
-            <Image source={Images.ready} />
-            <Text style={styles.sectionText}>
-              END !
-            </Text>
+            <Text style={[styles.titleText, {color: 'white'}]}>{dataGame.end.title}</Text>
+            <Text style={[styles.titleText_breizh, {color: 'white'}]}>{dataGame.end.title_breton}</Text>
+            <Text style={[styles.sectionText, {color: 'white'}]}>{dataGame.end.desc}</Text>
+
+            <RoundedButton
+              text='Recommencer'
+              onPress={() => {
+                navigate('LaunchScreen')
+                this.props.resetGame()
+              }}
+            />
           </View>
+
+          <View style={styles.sectionCredits} >
+            <View style={styles.separator} />
+            <Text style={styles.sectionTextCredits}>{dataGame.end.credits}</Text>
+          </View>
+
         </ScrollView>
       </View>
     )
@@ -32,11 +50,13 @@ class EndScreen extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
+    count: state.game.count
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    resetGame: () => { dispatch({ type: 'RESET_GAME' }) }
   }
 }
 

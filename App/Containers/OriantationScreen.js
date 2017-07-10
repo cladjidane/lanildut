@@ -2,15 +2,15 @@ import React from 'react'
 import { View, ScrollView, Text, TouchableOpacity, Modal } from 'react-native'
 import { connect } from 'react-redux'
 import Icon from 'react-native-vector-icons/FontAwesome'
-// Add Actions - replace 'Your' with whatever your reducer is called :)
-// import YourActions from '../Redux/YourRedux'
+
+// Data
+import dataGame from '../Fixtures/game.json'
 
 // Styles
 import styles from './Styles/OriantationScreenStyle'
 
 // Components
 import RoundedButton from '../Components/RoundedButton'
-import dataGame from '../Fixtures/game.json'
 import StaticMap from '../Components/StaticMap'
 import IconButton from '../Components/IconButton'
 
@@ -51,8 +51,10 @@ class OriantationScreen extends React.Component {
 
   render () {
     const { navigate } = this.props.navigation
-    // console.tron.log(dataGame.steps[this.props.count])
-    // const { count } = this.props.game
+    console.tron.display({
+      name: 'Current state',
+      value: this.state
+    })
     return (
       <View style={styles.mainContainer}>
         <ScrollView style={styles.container}>
@@ -63,7 +65,7 @@ class OriantationScreen extends React.Component {
 
           <View style={styles.halfSection} >
             <Text style={styles.titleText}>{this.state.currentDataByStep.orientation.texts.title}</Text>
-            <Text style={styles.titleText_breizh}>Ar Fourn soud</Text>
+            <Text style={styles.titleText_breizh}>{this.state.currentDataByStep.orientation.texts.title_breton}</Text>
             <Text style={styles.sectionText}>{this.state.currentDataByStep.orientation.texts.desc}</Text>
 
             <View style={styles.infos}>
@@ -126,8 +128,6 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    increment: () => { dispatch({ type: 'INCREMENT' }) },
-    decrement: () => { dispatch({ type: 'DECREMENT' }) }
   }
 }
 
