@@ -10,8 +10,8 @@ class StaticMap extends React.Component {
   constructor (props) {
     super(props)
 
-    var lat = this.props.lat
-    var lng = this.props.lng
+    var lat = this.props.orientation.lat
+    var lng = this.props.orientation.lng
 
     this.state = {
       region: {
@@ -21,7 +21,6 @@ class StaticMap extends React.Component {
         longitudeDelta: 0.00421
       }
     }
-    console.tron.log(this.state)
   }
 
   render () {
@@ -30,7 +29,11 @@ class StaticMap extends React.Component {
         <MapView
           style={Styles.mapView}
           region={this.state.region}
-        />
+        >
+          <MapView.Marker
+            coordinate={this.state.region}
+           />
+        </MapView>
       </View>
     )
   }

@@ -11,6 +11,7 @@ import {
 } from 'react-native'
 
 import Video from 'react-native-video'
+import { Metrics } from '../Themes/'
 
 export default class video extends Component {
   constructor (props) {
@@ -233,7 +234,8 @@ const styles = StyleSheet.create({
     left: 0,
     bottom: 0,
     right: 0,
-    backgroundColor: 'black'
+    backgroundColor: 'black',
+    width: Metrics.screenwidth
   },
   controls: {
     backgroundColor: 'transparent',

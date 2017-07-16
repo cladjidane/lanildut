@@ -8,7 +8,7 @@ export default StyleSheet.create({
   headerLaunch: {
     backgroundColor: Colors.darkBlue
   },
-  headerOriantation: {
+  headerOrientation: {
     backgroundColor: Colors.red,
     shadowRadius: 0,
     shadowOffset: {

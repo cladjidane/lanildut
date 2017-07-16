@@ -1,34 +1,35 @@
 import { StackNavigator } from 'react-navigation'
-import FullMapScreen from '../Containers/FullMapScreen'
 import React from 'react'
-import { TouchableOpacity } from 'react-native'
+import FullMapScreen from '../Containers/FullMapScreen'
 import EndScreen from '../Containers/EndScreen'
 import StepScreen from '../Containers/StepScreen'
-import OriantationScreen from '../Containers/OriantationScreen'
+import OrientationScreen from '../Containers/OrientationScreen'
 import LaunchScreen from '../Containers/LaunchScreen'
-import Icon from 'react-native-vector-icons/SimpleLineIcons'
+import HeaderRight from './HeaderRight'
 
 import styles from './Styles/NavigationStyles'
 
-OriantationScreen.navigationOptions = props => {
+StepScreen.navigationOptions = props => {
   const { navigation } = props
   return {
     headerTitleStyle: { color: '#fff' },
     headerTintColor: 'white',
-    headerStyle: styles.headerOriantation,
-    title: 'Oriantation',
+    headerStyle: styles.headerOrientation,
+    title: 'Ecoutez',
     headerBackTitle: null,
-    headerRight: (
-      <TouchableOpacity
-        accessibilityTraits='button'
-        onPress={() =>
-        navigation.navigate('FullMapScreen')
-      }
-        activeOpacity={0.8}
-    >
-        <Icon name='location-pin' style={{paddingRight: 10}} size={25} color='white' />
-      </TouchableOpacity>
-    )
+    headerRight: <HeaderRight navigation={navigation} />
+  }
+}
+
+OrientationScreen.navigationOptions = props => {
+  const { navigation } = props
+  return {
+    headerTitleStyle: { color: '#fff' },
+    headerTintColor: 'white',
+    headerStyle: styles.headerOrientation,
+    title: 'Orientation',
+    headerBackTitle: null,
+    headerRight: <HeaderRight navigation={navigation} />
   }
 }
 
@@ -36,27 +37,31 @@ OriantationScreen.navigationOptions = props => {
 const PrimaryNav = StackNavigator({
   FullMapScreen: {
     screen: FullMapScreen,
-    mode: 'modal'
-    // navigationOptions: { header: null }
+    mode: 'modal',
+    navigationOptions: {
+      headerStyle: styles.headerOrientation,
+      title: 'Plan général',
+      headerTitleStyle: { color: '#fff' },
+      headerTintColor: 'white'
+    }
   },
   EndScreen: {
     screen: EndScreen,
-    navigationOptions: { header: null }
-  },
-  StepScreen: {
-    screen: StepScreen,
     navigationOptions: {
-      headerStyle: styles.headerStep,
-      title: 'Ecoutez',
-      headerBackTitle: null
+      header: null,
+      gesturesEnabled: false
     }
   },
-  OriantationScreen: {
-    screen: OriantationScreen
+  StepScreen: {
+    screen: StepScreen
+  },
+  OrientationScreen: {
+    screen: OrientationScreen
   },
   LaunchScreen: {
     screen: LaunchScreen,
     navigationOptions: {
+      gesturesEnabled: false,
       header: null,
       headerBackTitle: null
     }

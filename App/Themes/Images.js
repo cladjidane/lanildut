@@ -7,7 +7,7 @@ const images = {
     { th: require('../Images/game/thumbs-step1.jpg') }
   ],
   videos: {
-    video1: require('../Fixtures/broadchurch.mp4'),
+    video1: require('../Fixtures/step-1.mp4'),
     videotest: require('../Fixtures/broadchurch.mp4')
   },
   logo: require('../Images/ir.png'),

@@ -2,9 +2,9 @@
 {
   "introduction": {
     "name": "LANILDUT",
-    "title": "Parcours découverte",
-    "title_breton": "Pourmenadenn dizoleiñ",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis sodales mauris"
+    "title": "Bienvenue à Lanildut",
+    "title_breton": "Degemer mat e Lannildud",
+    "desc": "Laissez-vous guider par cette balade interactive en 12 étapes, qui vous emmènera durant environ 1H30 à la découverte des secrets et des histoires d'un incroyable patrimoine ! "
   } ,
   "end": {
     "title": "Fin !",
@@ -16,9 +16,9 @@
     {
       "orientation": {
         "texts": {
-          "title": "Départ de la balade",
-          "title_breton": "Abla Breton",
-          "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis sodales mauris"
+          "title": "Le port des goémoniers",
+          "title_breton": "Ar porzh a bezhinaerien",
+          "desc": "Empruntez les escaliers sur votre droite et dirigez-vous vers la plage, à droite."
         },
         "infos": {
           "time": {
@@ -39,14 +39,14 @@
       },
       "step": {
         "video": {
-          "url": "broadchurch.mp4",
+          "url": "step-1.mp4",
           "thumbs": "thumbs-step1.jpg"
         },
         "texts": {
-          "title": "Départ de la balade",
-          "title_breton": "Abla Breton",    
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis sodales mauris, dignissim sollicitudin elit. Integer ac nisl at quam sollicitudin dictum. Quisque a vulputate turpis, aliquet faucibus enim. Sed pretium diam nec mauris suscipit sodales. Aenean pulvinar dignissim quam in suscipit.",    
-          "text_plus": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis sodales mauris, dignissim sollicitudin elit. Integer ac nisl at quam sollicitudin dictum. Quisque a vulputate turpis, aliquet faucibus enim. Sed pretium diam nec mauris suscipit sodales. Aenean pulvinar dignissim quam in suscipit."
+          "title": "Le port des goémoniers",
+          "title_breton": "Ar porzh a bezhinaerien",   
+          "text": "Vous êtes devant le premier port européen de déchargement du goémon. Plus de 35 000 tonnes d'algues y transitent chaque année. Chargées dans des camions, elles sont envoyées vers des usines de la région pour servir ensuite dans l'alimentation ou les cosmétiques...",    
+          "text_plus": "Vous voulez en savoir plus sur la passionnante histoire des goémoniers? Rendez-vous à la Maison de l'algue, dans le bâtiment de l'Office du Tourisme, après votre balade ! Entrée gratuite Vous pouvez vous y  procurer le DVD du documentaire de Frédéric Rabaud et de Florence Riou : Des hommes et des algues"
         }
       }
     },
@@ -76,7 +76,7 @@
       },
       "step": {
         "video": {
-          "url": "broadchurch.mp4",
+          "url": "step-1.mp4",
           "thumbs": "thumbs-step2.jpg"
         },
         "texts": {
@@ -113,7 +113,7 @@
       },
       "step": {
         "video": {
-          "url": "broadchurch.mp4",
+          "url": "step-1.mp4",
           "thumbs": "thumbs-step1.jpg"
         },
         "texts": {

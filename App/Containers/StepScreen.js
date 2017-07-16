@@ -12,6 +12,7 @@ import styles from './Styles/StepScreenStyle'
 // Components
 import RoundedButton from '../Components/RoundedButton'
 import Video from '../Components/Video'
+import Icon from 'react-native-vector-icons/FontAwesome'
 
 class StepScreen extends React.Component {
   constructor (props) {
@@ -30,7 +31,7 @@ class StepScreen extends React.Component {
   render () {
     const { navigate } = this.props.navigation
     const currentDataByStep = this.state.currentDataByStep
-    const namevideo = 'videotest'
+    const namevideo = 'video1'
 
     // Is last screen ?
     const lastStep = ((dataGame.steps.length - 1) === this.props.count)
@@ -40,11 +41,22 @@ class StepScreen extends React.Component {
         <ScrollView style={styles.container}>
 
           <View style={styles.containerMedia} >
-            <View style={styles.centered}>
-              <TouchableOpacity onPress={this.toggleModal}>
-                <Image source={Images.thumbs[this.props.count].th} style={styles.thumbs} />
-              </TouchableOpacity>
-            </View>
+            <TouchableOpacity onPress={this.toggleModal}>
+              <Image resizeMode='cover' source={Images.thumbs[this.props.count].th} style={styles.thumbs}>
+                <View
+                  style={{
+                    backgroundColor: 'transparent',
+                    flex: 1,
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                  }}
+                >
+                  <Icon
+                    name='play-circle' size={50} color='white'
+                  />
+                </View>
+              </Image>
+            </TouchableOpacity>
           </View>
 
           <View style={styles.halfSection} >
@@ -60,7 +72,7 @@ class StepScreen extends React.Component {
               text='Continuer'
               onPress={() => {
                 if (lastStep) navigate('EndScreen')
-                else navigate('OriantationScreen')
+                else navigate('OrientationScreen')
                 this.props.increment()
               }}
             />

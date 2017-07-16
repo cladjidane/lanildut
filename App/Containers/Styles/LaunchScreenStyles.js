@@ -3,23 +3,33 @@ import { Metrics, ApplicationStyles, Colors, Fonts } from '../../Themes/'
 
 export default StyleSheet.create({
   ...ApplicationStyles.screen,
-  container: {
+  mainContainer: {
     flex: 1,
     backgroundColor: Colors.blue
   },
-  logo: {
-    marginTop: Metrics.doubleSection,
-    height: Metrics.images.logo,
-    width: Metrics.images.logo,
-    resizeMode: 'contain'
+  launchContainer: {
+    flex: 1
+    // backgroundColor: Colors.red
   },
-  centered: {
-    alignItems: 'center'
+  launchHalfSectionPan: {
+    height: Metrics.screenHeight / 2,
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  viewImageMediaHome: {
+    flex: 1,
+    height: Metrics.screenHeight / 2
   },
   imageMediaHome: {
-    flex: 0.5
+    height: Metrics.screenHeight / 2,
+    width: Metrics.screenWidth,
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   viewMediaHome: {
+    position: 'absolute',
     flex: 1,
     borderTopWidth: Metrics.screenWidth / 2,
     borderBottomWidth: Metrics.screenWidth / 2,
@@ -30,6 +40,20 @@ export default StyleSheet.create({
     borderLeftColor: 'transparent',
     borderRightColor: 'transparent',
     width: Metrics.screenWidth
+  },
+  titleGameHome: {
+    ...Fonts.style.h2,
+    fontSize: 30,
+    fontWeight: 'bold',
+    color: Colors.snow,
+    textAlign: 'center',
+    backgroundColor: 'transparent',
+    textShadowColor: 'black',
+    textShadowOffset: {
+      width: 10,
+      height: 10
+    },
+    textShadowRadius: 10
   },
   titleTextHome: {
     ...Fonts.style.h2,
