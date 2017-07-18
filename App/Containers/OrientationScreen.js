@@ -31,21 +31,14 @@ class OrientationScreen extends React.Component {
 
   onPressForModalTip = () => {
     this.setState({
-      contentModal: this.state.currentDataByStep.orientation.infos.tip,
+      contentModal: this.state.currentDataByStep.orientation.accessibility,
       showModal: true
     })
   }
 
   onPressForModalTime = () => {
     this.setState({
-      contentModal: this.state.currentDataByStep.orientation.infos.time,
-      showModal: true
-    })
-  }
-
-  onPressForModalHardness = () => {
-    this.setState({
-      contentModal: this.state.currentDataByStep.orientation.infos.hardness,
+      contentModal: this.state.currentDataByStep.orientation.time,
       showModal: true
     })
   }
@@ -62,9 +55,9 @@ class OrientationScreen extends React.Component {
           </View>
 
           <View style={styles.halfSection} >
-            <Text style={styles.titleText}>{currentDataByStep.orientation.texts.title}</Text>
-            <Text style={styles.titleText_breizh}>{currentDataByStep.orientation.texts.title_breton}</Text>
-            <Text style={styles.sectionText}>{currentDataByStep.orientation.texts.desc}</Text>
+            <Text style={styles.titleText}>{currentDataByStep.orientation.title}</Text>
+            <Text style={styles.titleText_breizh}>{currentDataByStep.orientation.title_breton}</Text>
+            <Text style={styles.sectionText}>{currentDataByStep.orientation.desc}</Text>
 
             <View style={styles.infos}>
               <IconButton
@@ -76,11 +69,6 @@ class OrientationScreen extends React.Component {
                 icon='bulb'
                 text='Conseils'
                 onPress={this.onPressForModalTip}
-              />
-              <IconButton
-                icon='note'
-                text='Infos'
-                onPress={this.onPressForModalHardness}
               />
             </View>
 

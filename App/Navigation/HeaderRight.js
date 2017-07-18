@@ -6,10 +6,10 @@ export default class HeaderRight extends React.Component {
   constructor (props) {
     super(props)
     this.props = props
-    console.tron.display({
+    /*console.tron.display({
       name: 'TEST',
       value: props
-    })
+    })*/
   }
 
   render () {

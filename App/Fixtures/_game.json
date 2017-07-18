@@ -1,0 +1,128 @@
+/* http://www.gps-coordinates.org/ */
+{
+  "introduction": {
+    "name": "LANILDUT",
+    "title": "Bienvenue à Lanildut",
+    "title_breton": "Degemer mat e Lannildud",
+    "desc": "Laissez-vous guider par cette balade interactive en 12 étapes, qui vous emmènera durant environ 1H30 à la découverte des secrets et des histoires d'un incroyable patrimoine ! "
+  } ,
+  "end": {
+    "title": "Fin !",
+    "title_breton": "",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis sodales mauris",
+    "credits": "Cette balade découverte de Lanildut a été réalisée par Tydéo, entreprise spécialisée dans la prise de vue vidéo et le studio de développement web Koality et blablabla..."
+  },
+  "steps": [
+    {
+      "orientation": {
+        "texts": {
+          "title": "Le port des goémoniers",
+          "title_breton": "Ar porzh a bezhinaerien",
+          "desc": "Empruntez les escaliers sur votre droite et dirigez-vous vers la plage, à droite."
+        },
+        "infos": {
+          "time": {
+            "title": "Durée estimée",
+            "text": "2h23"
+          },
+          "hardness": {
+            "title": "Difficultés",
+            "text": "Bords escarpés"
+          },
+          "tip": {
+            "title": "Conseils",
+            "text": "Attention aux secousses"
+          }
+        },
+        "lat": "48.47074466655615",
+        "lng": "-4.756929874420166"
+      },
+      "step": {
+        "video": {
+          "url": "step-1.mp4",
+          "thumbs": "thumbs-step1.jpg"
+        },
+        "texts": {
+          "title": "Le port des goémoniers",
+          "title_breton": "Ar porzh a bezhinaerien",   
+          "text": "Vous êtes devant le premier port européen de déchargement du goémon. Plus de 35 000 tonnes d'algues y transitent chaque année. Chargées dans des camions, elles sont envoyées vers des usines de la région pour servir ensuite dans l'alimentation ou les cosmétiques...",    
+          "text_plus": "Vous voulez en savoir plus sur la passionnante histoire des goémoniers? Rendez-vous à la Maison de l'algue, dans le bâtiment de l'Office du Tourisme, après votre balade ! Entrée gratuite Vous pouvez vous y  procurer le DVD du documentaire de Frédéric Rabaud et de Florence Riou : Des hommes et des algues"
+        }
+      }
+    },
+    {
+      "orientation": {
+        "texts": {
+          "title": "On continue phase 2",
+          "title_breton": "** Abla Breton",
+          "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis sodales mauris, dignissim sollicitudin elit. Integer ac nisl at quam sollicitudin dictum. Quisque a vulputate turpis, aliquet faucibus enim. Sed pretium diam nec mauris suscipit sodales. Aenean pulvinar dignissim quam in suscipit."
+        },
+        "infos": {
+          "time": {
+            "title": "Durée estimée",
+            "text": "2h23"
+          },
+          "hardness": {
+            "title": "Difficultés",
+            "text": "Bords escarpés"
+          },
+          "tip": {
+            "title": "Conseils",
+            "text": "Attention aux secousses"
+          }
+        },
+        "lat": "48.47022539709875",
+        "lng": "-4.757251739501953"
+      },
+      "step": {
+        "video": {
+          "url": "step-1.mp4",
+          "thumbs": "thumbs-step2.jpg"
+        },
+        "texts": {
+          "title": "Etape n° 2",
+          "title_breton": "** Abla Breton",    
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis sodales mauris, dignissim sollicitudin elit. Integer ac nisl at quam sollicitudin dictum. Quisque a vulputate turpis, aliquet faucibus enim. Sed pretium diam nec mauris suscipit sodales. Aenean pulvinar dignissim quam in suscipit.",    
+          "text_plus": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis sodales mauris, dignissim sollicitudin elit. Integer ac nisl at quam sollicitudin dictum. Quisque a vulputate turpis, aliquet faucibus enim. Sed pretium diam nec mauris suscipit sodales. Aenean pulvinar dignissim quam in suscipit."
+        }
+      }
+    },
+    {
+      "orientation": {
+        "texts": {
+          "title": "Et phase 3",
+          "title_breton": "*** Abla Breton",
+          "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis sodales mauris, dignissim sollicitudin elit. Integer ac nisl at quam sollicitudin dictum. Quisque a vulputate turpis, aliquet faucibus enim. Sed pretium diam nec mauris suscipit sodales. Aenean pulvinar dignissim quam in suscipit."
+        },
+        "infos": {
+          "time": {
+            "title": "Durée estimée",
+            "text": "2h23"
+          },
+          "hardness": {
+            "title": "Difficultés",
+            "text": "Bords escarpés"
+          },
+          "tip": {
+            "title": "Conseils",
+            "text": "Attention aux secousses"
+          }
+        },
+        "lat": "48.47061662800544",
+        "lng": "-4.759504795074463"
+      },
+      "step": {
+        "video": {
+          "url": "step-1.mp4",
+          "thumbs": "thumbs-step1.jpg"
+        },
+        "texts": {
+          "title": "Etape n° 3",
+          "title_breton": "*** Abla Breton",    
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis sodales mauris, dignissim sollicitudin elit. Integer ac nisl at quam sollicitudin dictum. Quisque a vulputate turpis, aliquet faucibus enim. Sed pretium diam nec mauris suscipit sodales. Aenean pulvinar dignissim quam in suscipit.",    
+          "text_plus": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis sodales mauris, dignissim sollicitudin elit. Integer ac nisl at quam sollicitudin dictum. Quisque a vulputate turpis, aliquet faucibus enim. Sed pretium diam nec mauris suscipit sodales. Aenean pulvinar dignissim quam in suscipit."
+        }
+      }
+    }
+  ]
+}

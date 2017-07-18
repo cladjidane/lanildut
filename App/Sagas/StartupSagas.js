@@ -4,13 +4,13 @@ import GameActions from '../Redux/GameRedux'
 
 // process STARTUP actions
 export function * startup (action) {
-  console.tron.display({
+  /*console.tron.display({
     name: '🔥 StartupSagas.js 🔥',
     preview: 'fn',
     value: {
       action
     }
-  })
+  })*/
 
   // On lance l'action initiale qui va définir l'id du jeu que l'on souhaite
   yield put(GameActions.gameRequest(1))

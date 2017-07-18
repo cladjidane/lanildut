@@ -24,9 +24,9 @@ class EndScreen extends React.Component {
           </View>
 
           <View style={styles.section} >
-            <Text style={[styles.titleText, {color: 'white'}]}>{dataGame.end.title}</Text>
-            <Text style={[styles.titleText_breizh, {color: 'white'}]}>{dataGame.end.title_breton}</Text>
-            <Text style={[styles.sectionText, {color: 'white'}]}>{dataGame.end.desc}</Text>
+            <Text style={[styles.titleText, {color: 'white'}]}>{dataGame.end.title_end}</Text>
+            <Text style={[styles.titleText_breizh, {color: 'white'}]}>{dataGame.end.title_end_breton}</Text>
+            <Text style={[styles.sectionText, {color: 'white'}]}>{dataGame.end.text_end}</Text>
 
             <RoundedButton
               text='Recommencer'

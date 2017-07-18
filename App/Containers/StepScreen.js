@@ -31,7 +31,7 @@ class StepScreen extends React.Component {
   render () {
     const { navigate } = this.props.navigation
     const currentDataByStep = this.state.currentDataByStep
-    const namevideo = 'video1'
+    const namevideo = 'video' + (this.props.count+1)
 
     // Is last screen ?
     const lastStep = ((dataGame.steps.length - 1) === this.props.count)
@@ -61,11 +61,11 @@ class StepScreen extends React.Component {
 
           <View style={styles.halfSection} >
 
-            <Text style={styles.titleText}>{currentDataByStep.step.texts.title}</Text>
-            <Text style={styles.titleText_breizh}>{currentDataByStep.step.texts.title_breton}</Text>
+            <Text style={styles.titleText}>{currentDataByStep.orientation.title}</Text>
+            <Text style={styles.titleText_breizh}>{currentDataByStep.orientation.title_breton}</Text>
             <Text style={styles.sectionText_left}>
-              {currentDataByStep.step.texts.text}
-              {/* currentDataByStep.step.text_plus */}
+              {currentDataByStep.step.text}
+              {currentDataByStep.step.text_plus}
             </Text>
 
             <RoundedButton

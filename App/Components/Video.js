@@ -121,98 +121,23 @@ export default class video extends Component {
   }
 
   _onPressPlay () {
-    console.tron.log(this.ref)
-  }
-
-  renderCustomSkin () {
-    return (
-      <View style={styles.container}>
-        <TouchableOpacity style={styles.fullScreen} onPress={this._onPressPlay}>
-          <Video
-            ref={(ref) => {
-              this.player = ref
-            }}
-            source={require('../Fixtures/broadchurch.mp4')}
-            style={styles.fullScreen}
-            // rate={this.state.rate}
-            // paused={this.state.paused}
-            // volume={this.state.volume}
-            // muted={this.state.muted}
-            // ignoreSilentSwitch={this.state.ignoreSilentSwitch}
-            resizeMode={this.state.resizeMode}
-            // onLoad={this.onLoad}
-            // onBuffer={this.onBuffer}
-            // onProgress={this.onProgress}
-            // onEnd={() => { AlertIOS.alert('Done!') }}
-            // repeat={true}
-          />
-        </TouchableOpacity>
-
-      </View>
-    )
+    //console.tron.log(this.ref)
   }
 
   renderNativeSkin () {
     const videoStyle = styles.fullScreen
+    const source = this.props.source
+    console.tron.display({
+      value: source
+    })
     return (
       <View style={styles.container}>
         <View style={styles.fullScreen}>
           <Video
-            source={this.props.source}
+            source={source}
             style={videoStyle}
-            // rate={this.state.rate}
-            // paused={this.state.paused}
-            // volume={this.state.volume}
-            // muted={this.state.muted}
-            // ignoreSilentSwitch={this.state.ignoreSilentSwitch}
-            // resizeMode={this.state.resizeMode}
-            // onLoad={this.onLoad}
-            // onBuffer={this.onBuffer}
-            // onProgress={this.onProgress}
-            // onEnd={() => { AlertIOS.alert('Done!') }}
-            // repeat={true}
-            // controls={this.state.controls}
           />
         </View>
-        {/*
-        <View style={styles.controls}>
-          <View style={styles.generalControls}>
-            <View style={styles.skinControl}>
-              {this.renderSkinControl('custom')}
-              {this.renderSkinControl('native')}
-              {this.renderSkinControl('embed')}
-            </View>
-          </View>
-          <View style={styles.generalControls}>
-            <View style={styles.rateControl}>
-              {this.renderRateControl(0.5)}
-              {this.renderRateControl(1.0)}
-              {this.renderRateControl(2.0)}
-            </View>
-
-            <View style={styles.volumeControl}>
-              {this.renderVolumeControl(0.5)}
-              {this.renderVolumeControl(1)}
-              {this.renderVolumeControl(1.5)}
-            </View>
-
-            <View style={styles.resizeModeControl}>
-              {this.renderResizeModeControl('cover')}
-              {this.renderResizeModeControl('contain')}
-              {this.renderResizeModeControl('stretch')}
-            </View>
-          </View>
-          <View style={styles.generalControls}>
-            {
-              (Platform.OS === 'ios') ?
-                <View style={styles.ignoreSilentSwitchControl}>
-                  {this.renderIgnoreSilentSwitchControl('ignore')}
-                  {this.renderIgnoreSilentSwitchControl('obey')}
-                </View> : null
-            }
-          </View>
-        </View>
-        */}
 
       </View>
     )

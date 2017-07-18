@@ -10,8 +10,8 @@ class StaticMap extends React.Component {
   constructor (props) {
     super(props)
 
-    var lat = this.props.orientation.lat
-    var lng = this.props.orientation.lng
+    var lat = this.props.orientation.latitude
+    var lng = this.props.orientation.longitude
 
     this.state = {
       region: {

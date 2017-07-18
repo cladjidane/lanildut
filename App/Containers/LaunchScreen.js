@@ -1,5 +1,6 @@
 import React from 'react'
 import { ScrollView, Text, View, Image } from 'react-native'
+import HTMLView from 'react-native-htmlview'
 
 // Data
 import dataGame from '../Fixtures/game.json'
@@ -18,12 +19,13 @@ export default class LaunchScreen extends React.Component {
         <ScrollView style={styles.launchContainer}>
           <View style={styles.launchHalfSectionPan} >
 
-            <Text style={styles.titleTextHome}>{dataGame.introduction.name}</Text>
-            <Text style={styles.subtitleHome}>{dataGame.introduction.title}</Text>
-            <Text style={styles.subtitleHome_breizh}>{dataGame.introduction.title_breton}</Text>
-            <Text style={styles.sectionTextHome}>
-              {dataGame.introduction.desc}
-            </Text>
+            <Text style={styles.titleTextHome}>{dataGame.introduction.name_application}</Text>
+            <Text style={styles.subtitleHome}>{dataGame.introduction.title_home}</Text>
+            <Text style={styles.subtitleHome_breizh}>{dataGame.introduction.title_home_breton}</Text>
+            <HTMLView
+              value={dataGame.introduction.text_intro}
+              stylesheet={styles.sectionTextHome}
+            />
 
           </View>
 

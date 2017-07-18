@@ -3,12 +3,30 @@ const images = {
   thumbs: [
     { th: require('../Images/game/thumbs-step1.jpg') },
     { th: require('../Images/game/thumbs-step2.jpg') },
-    { th: require('../Images/game/thumbs-step1.jpg') },
-    { th: require('../Images/game/thumbs-step1.jpg') }
+    { th: require('../Images/game/thumbs-step3.jpg') },
+    { th: require('../Images/game/thumbs-step4.jpg') },
+    { th: require('../Images/game/thumbs-step5.jpg') },
+    { th: require('../Images/game/thumbs-step6.jpg') },
+    { th: require('../Images/game/thumbs-step7.jpg') },
+    { th: require('../Images/game/thumbs-step8.jpg') },
+    { th: require('../Images/game/thumbs-step9.jpg') },
+    { th: require('../Images/game/thumbs-step10.jpg') },
+    { th: require('../Images/game/thumbs-step11.jpg') },
+    { th: require('../Images/game/thumbs-step12.jpg') }
   ],
   videos: {
     video1: require('../Fixtures/step-1.mp4'),
-    videotest: require('../Fixtures/broadchurch.mp4')
+    video2: require('../Fixtures/step-2.mp4'),
+    video3: require('../Fixtures/step-3.mp4'),
+    video4: require('../Fixtures/step-4.mp4'),
+    video5: require('../Fixtures/step-5.mp4'),
+    video6: require('../Fixtures/step-6.mp4'),
+    video7: require('../Fixtures/step-7.mp4'),
+    video8: require('../Fixtures/step-8.mp4'),
+    video9: require('../Fixtures/step-9.mp4'),
+    video10: require('../Fixtures/step-10.mp4'),
+    video11: require('../Fixtures/step-11.mp4'),
+    video12: require('../Fixtures/step-12.mp4')
   },
   logo: require('../Images/ir.png'),
   clearLogo: require('../Images/top_logo.png'),
