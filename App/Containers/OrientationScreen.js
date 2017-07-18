@@ -14,6 +14,7 @@ import RoundedButton from '../Components/RoundedButton'
 import StaticMap from '../Components/StaticMap'
 import IconButton from '../Components/IconButton'
 import FullMapScreen from './FullMapScreen'
+import HTMLView from 'react-native-htmlview'
 
 class OrientationScreen extends React.Component {
   constructor (props) {
@@ -21,7 +22,7 @@ class OrientationScreen extends React.Component {
     this.state = {
       showModal: false,
       showModalMap: false,
-      contentModal: {},
+      contentModal: '',
       currentDataByStep: dataGame.steps[this.props.count]
     }
   }
@@ -29,16 +30,9 @@ class OrientationScreen extends React.Component {
   toggleModal = () => { this.setState({ showModal: !this.state.showModal }) }
   toggleModalMap = () => { this.setState({ showModalMap: !this.state.showModalMap }) }
 
-  onPressForModalTip = () => {
+  onPressForModalAccessibility = () => {
     this.setState({
       contentModal: this.state.currentDataByStep.orientation.accessibility,
-      showModal: true
-    })
-  }
-
-  onPressForModalTime = () => {
-    this.setState({
-      contentModal: this.state.currentDataByStep.orientation.time,
       showModal: true
     })
   }
@@ -51,24 +45,24 @@ class OrientationScreen extends React.Component {
         <ScrollView style={styles.container} bounces={false}>
           <View style={styles.wrapperMap} >
             <StaticMap orientation={currentDataByStep.orientation} />
-            <Text style={styles.subtitle}>ETAPE : {this.props.count + 1}</Text>
+            <Text style={styles.subtitle}>ETAPE : {this.props.count + 1} - {currentDataByStep.orientation.time}</Text>
           </View>
 
           <View style={styles.halfSection} >
             <Text style={styles.titleText}>{currentDataByStep.orientation.title}</Text>
             <Text style={styles.titleText_breizh}>{currentDataByStep.orientation.title_breton}</Text>
-            <Text style={styles.sectionText}>{currentDataByStep.orientation.desc}</Text>
+            <View style={styles.orientationText}>
+              <View style={styles.containerHTMLView}>
+                <HTMLView
+                  value={currentDataByStep.orientation.desc}
+                  stylesheet={styles}
+                />
+              </View>
 
-            <View style={styles.infos}>
-              <IconButton
-                icon='present'
-                text='Durée'
-                onPress={this.onPressForModalTime}
-              />
               <IconButton
                 icon='bulb'
                 text='Conseils'
-                onPress={this.onPressForModalTip}
+                onPress={this.onPressForModalAccessibility}
               />
             </View>
 
@@ -86,8 +80,13 @@ class OrientationScreen extends React.Component {
             >
             <View
               style={styles.modalInfos}>
-              <Text style={styles.titleText}>{this.state.contentModal.title}</Text>
-              <Text style={styles.sectionText}>{this.state.contentModal.text}</Text>
+              <Text style={styles.titleText}>Informations</Text>
+              <View style={styles.containerHTMLViewModal}>
+                <HTMLView
+                  value={this.state.contentModal}
+                  stylesheet={{textAlign: 'center'}}
+                />
+              </View>
             </View>
 
             <TouchableOpacity

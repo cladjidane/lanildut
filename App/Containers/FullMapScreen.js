@@ -15,7 +15,7 @@ class FullMapScreen extends React.Component {
 
     var lat = '48.47074466655615'
     var lng = '-4.756929874420166'
-    var SPACE = 0.01
+    // var SPACE = 0.01
 
     this.state = {
       region: {
@@ -27,11 +27,11 @@ class FullMapScreen extends React.Component {
     }
   }
 
-  marker_map() {
-    return dataGame.steps.map(function(step, i){
+  MarkerMap () {
+    return dataGame.steps.map(function (step, i) {
       const coor = {
         latitude: parseFloat(step.orientation.latitude + 0.01),
-        longitude: parseFloat(step.orientation.longitude + 0.01),
+        longitude: parseFloat(step.orientation.longitude + 0.01)
       }
       /*
       console.tron.display({
@@ -39,12 +39,12 @@ class FullMapScreen extends React.Component {
         value: coor
       })
       */
-      return(
+      return (
         <View key={i}>
           <MapView.Marker coordinate={coor} />
         </View>
-      );
-    });
+      )
+    })
   }
 
   render () {
@@ -55,7 +55,7 @@ class FullMapScreen extends React.Component {
           mapType='satellite'
           region={this.state.region}
         >
-          {this.marker_map()}
+          {this.MarkerMap()}
         </MapView>
       </View>
     )

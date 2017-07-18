@@ -22,10 +22,12 @@ export default class LaunchScreen extends React.Component {
             <Text style={styles.titleTextHome}>{dataGame.introduction.name_application}</Text>
             <Text style={styles.subtitleHome}>{dataGame.introduction.title_home}</Text>
             <Text style={styles.subtitleHome_breizh}>{dataGame.introduction.title_home_breton}</Text>
-            <HTMLView
-              value={dataGame.introduction.text_intro}
-              stylesheet={styles.sectionTextHome}
-            />
+            <View style={styles.containerHTMLView}>
+              <HTMLView
+                value={dataGame.introduction.text_intro}
+                stylesheet={styles}
+              />
+            </View>
 
           </View>
 

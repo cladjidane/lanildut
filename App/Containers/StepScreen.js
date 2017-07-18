@@ -13,6 +13,7 @@ import styles from './Styles/StepScreenStyle'
 import RoundedButton from '../Components/RoundedButton'
 import Video from '../Components/Video'
 import Icon from 'react-native-vector-icons/FontAwesome'
+import HTMLView from 'react-native-htmlview'
 
 class StepScreen extends React.Component {
   constructor (props) {
@@ -31,7 +32,7 @@ class StepScreen extends React.Component {
   render () {
     const { navigate } = this.props.navigation
     const currentDataByStep = this.state.currentDataByStep
-    const namevideo = 'video' + (this.props.count+1)
+    const namevideo = 'video' + (this.props.count + 1)
 
     // Is last screen ?
     const lastStep = ((dataGame.steps.length - 1) === this.props.count)
@@ -63,10 +64,16 @@ class StepScreen extends React.Component {
 
             <Text style={styles.titleText}>{currentDataByStep.orientation.title}</Text>
             <Text style={styles.titleText_breizh}>{currentDataByStep.orientation.title_breton}</Text>
-            <Text style={styles.sectionText_left}>
-              {currentDataByStep.step.text}
-              {currentDataByStep.step.text_plus}
-            </Text>
+            <View style={styles.containerHTMLView}>
+              <HTMLView
+                value={currentDataByStep.step.text}
+                stylesheet={styles.html}
+              />
+              <HTMLView
+                value={currentDataByStep.step.text_plus}
+                stylesheet={styles.html}
+              />
+            </View>
 
             <RoundedButton
               text='Continuer'

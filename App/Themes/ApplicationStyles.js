@@ -6,6 +6,16 @@ import Colors from './Colors'
 // Similar to an XML fragment layout in Android
 
 const ApplicationStyles = {
+  html: {
+    // For html render
+    containerHTMLView: {
+      padding: Metrics.doubleBaseMargin
+    },
+    p: {
+      // ...Fonts.style.small,
+      color: Colors.snow
+    }
+  },
   screen: {
     mainContainer: {
       flex: 1,
@@ -42,7 +52,7 @@ const ApplicationStyles = {
       color: Colors.text,
       marginVertical: Metrics.smallMargin,
       paddingHorizontal: Metrics.doubleBaseMargin,
-      textAlign: 'center'
+      textAlign: 'left'
     },
     sectionText_left: {
       ...Fonts.style.small,
@@ -55,24 +65,34 @@ const ApplicationStyles = {
     subtitle: {
       color: Colors.snow,
       padding: Metrics.smallMargin,
-      textAlign: 'center',
+      paddingHorizontal: Metrics.doubleBaseMargin - 10,
+      textAlign: 'left',
       fontSize: 12
     },
     titleText: {
       ...Fonts.style.h2,
       fontSize: 24,
       color: Colors.textBlack,
-      textAlign: 'center',
+      textAlign: 'left',
       margin: Metrics.smallMargin,
-      marginTop: Metrics.doubleBaseMargin
+      marginTop: Metrics.doubleBaseMargin,
+      paddingHorizontal: Metrics.doubleBaseMargin - 5
     },
     titleText_breizh: {
       ...Fonts.style.h2,
       fontSize: 20,
-      textAlign: 'center',
+      textAlign: 'left',
       margin: Metrics.tinyMargin,
       marginTop: Metrics.BaseMargin,
+      paddingHorizontal: Metrics.doubleBaseMargin,
       color: Colors.red
+    },
+    // Orientation Text
+    orientationText: {
+      flex: 1,
+      margin: Metrics.doubleBaseMargin,
+      justifyContent: 'space-between',
+      flexDirection: 'row'
     },
     // Credits
     sectionCredits: {
@@ -82,7 +102,7 @@ const ApplicationStyles = {
     },
     sectionTextCredits: {
       fontSize: 12,
-      textAlign: 'center',
+      textAlign: 'left',
       color: Colors.snow,
       padding: Metrics.baseMargin
     },
@@ -90,8 +110,14 @@ const ApplicationStyles = {
       borderTopColor: Colors.snow,
       borderTopWidth: 1,
       margin: Metrics.baseMargin
+    },
+    separator_red: {
+      borderTopColor: Colors.red,
+      borderTopWidth: 1,
+      marginHorizontal: Metrics.doubleBaseMargin,
+      marginTop: Metrics.doubleBaseMargin + 10
     }
-    // End Credits
+    // End Credits,
   },
   darkLabelContainer: {
     padding: Metrics.smallMargin,

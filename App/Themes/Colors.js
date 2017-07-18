@@ -23,7 +23,7 @@ const colors = {
   fire: '#e73536',
   drawer: 'rgba(30, 30, 29, 0.95)',
   eggplant: '#251a34',
-  border: '#483F53',
+  border: 'rgba(0,0,0, 0.15)',
   banner: '#5F3E63',
   text: '#6a6a6a',
   textBlack: '#363636'

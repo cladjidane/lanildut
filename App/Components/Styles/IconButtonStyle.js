@@ -3,8 +3,6 @@ import { Colors } from '../../Themes/'
 
 export default StyleSheet.create({
   IconButtonContainer: {
-    width: 80,
-    margin: 10
   },
   IconButtonView: {
     justifyContent: 'center',

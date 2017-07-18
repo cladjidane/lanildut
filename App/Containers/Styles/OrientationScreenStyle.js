@@ -2,7 +2,27 @@ import { StyleSheet } from 'react-native'
 import {ApplicationStyles, Metrics, Colors} from '../../Themes/'
 
 export default StyleSheet.create({
+  ...ApplicationStyles.html,
   ...ApplicationStyles.screen,
+  // Override definition html
+  containerHTMLView: {
+    paddingLeft: 0,
+    paddingRight: 0,
+    width: Metrics.screenWidth - 130,
+    borderRightColor: Colors.border,
+    marginRight: 10,
+    borderRightWidth: 1
+  },
+  containerHTMLViewModal: {
+    paddingHorizontal: 0,
+    marginHorizontal: 0
+  },
+  p: {
+    color: Colors.text,
+    textAlign: 'center',
+    borderWidth: 1
+  },
+  // Next
   wrapperMap: {
     flex: 0.5,
     backgroundColor: Colors.red,

@@ -121,7 +121,7 @@ export default class video extends Component {
   }
 
   _onPressPlay () {
-    //console.tron.log(this.ref)
+    // console.tron.log(this.ref)
   }
 
   renderNativeSkin () {
