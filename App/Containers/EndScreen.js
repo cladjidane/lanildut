@@ -20,7 +20,7 @@ class EndScreen extends React.Component {
         <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
         <ScrollView style={styles.container}>
           <View style={styles.centered}>
-            <Image source={require('../Images/launch-icon.png')} style={styles.logo} />
+            <Image source={require('../Images/game/INTRO2.jpg')} style={styles.logo} />
           </View>
 
           <View style={styles.section} >

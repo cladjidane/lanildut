@@ -4,6 +4,7 @@ import React, {
 } from 'react'
 
 import {
+  Dimensions,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -12,6 +13,8 @@ import {
 
 import Video from 'react-native-video'
 import { Metrics } from '../Themes/'
+
+const { width, height } = Dimensions.get('window')
 
 export default class video extends Component {
   constructor (props) {
@@ -24,18 +27,28 @@ export default class video extends Component {
     rate: 1,
     volume: 1,
     muted: false,
-    resizeMode: 'cover',
     duration: 0.0,
     currentTime: 0.0,
     controls: false,
     paused: true,
     skin: 'embed',
     ignoreSilentSwitch: null,
-    isBuffering: false
-  };
+    isBuffering: false,
+    dimensions: {width, height},
+    resizeMode: ''
+  }
+
+  onLayout = (evt) => {
+    this.setState({
+      dimensions: {
+        height: evt.nativeEvent.layout.height,
+        width: evt.nativeEvent.layout.width
+      },
+      resizeMode: evt.nativeEvent.layout.width > evt.nativeEvent.layout.height ? 'cover': 'contain' 
+    })
+  }
 
   onLoad (data) {
-    console.log('On load fired!')
     this.setState({duration: data.duration})
   }
 
@@ -84,18 +97,6 @@ export default class video extends Component {
     )
   }
 
-  renderResizeModeControl (resizeMode) {
-    const isSelected = (this.state.resizeMode === resizeMode)
-
-    return (
-      <TouchableOpacity onPress={() => { this.setState({resizeMode: resizeMode}) }}>
-        <Text style={[styles.controlOption, {fontWeight: isSelected ? 'bold' : 'normal'}]}>
-          {resizeMode}
-        </Text>
-      </TouchableOpacity>
-    )
-  }
-
   renderVolumeControl (volume) {
     const isSelected = (this.state.volume === volume)
 
@@ -127,15 +128,26 @@ export default class video extends Component {
   renderNativeSkin () {
     const videoStyle = styles.fullScreen
     const source = this.props.source
-    console.tron.display({
-      value: source
-    })
+
     return (
-      <View style={styles.container}>
+      <View 
+        style={styles.container}
+        onLayout={this.onLayout}
+      >
         <View style={styles.fullScreen}>
           <Video
             source={source}
-            style={videoStyle}
+            style={{
+              width: this.state.dimensions.width, 
+              height: this.state.dimensions.height,
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              bottom: 0,
+              right: 0,
+              backgroundColor: 'black'
+            }} 
+            resizeMode={this.state.resizeMode}
           />
         </View>
 
@@ -144,7 +156,6 @@ export default class video extends Component {
   }
 
   render () {
-    // return this.state.controls ? this.renderNativeSkin() : this.renderCustomSkin();
     return this.renderNativeSkin()
   }
 }
@@ -154,13 +165,6 @@ const styles = StyleSheet.create({
     flex: 1
   },
   fullScreen: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    bottom: 0,
-    right: 0,
-    backgroundColor: 'black',
-    width: Metrics.screenwidth
   },
   controls: {
     backgroundColor: 'transparent',
@@ -203,12 +207,6 @@ const styles = StyleSheet.create({
   volumeControl: {
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'center'
-  },
-  resizeModeControl: {
-    flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
     justifyContent: 'center'
   },
   ignoreSilentSwitchControl: {

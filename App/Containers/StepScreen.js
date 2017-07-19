@@ -1,5 +1,5 @@
 import React from 'react'
-import { Modal, View, ScrollView, Text, TouchableOpacity, Image } from 'react-native'
+import { Dimensions, Modal, View, ScrollView, Text, TouchableOpacity, Image } from 'react-native'
 import { connect } from 'react-redux'
 import { Images } from '../Themes'
 
@@ -15,18 +15,30 @@ import Video from '../Components/Video'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import HTMLView from 'react-native-htmlview'
 
+const { width, height } = Dimensions.get('window')
+
 class StepScreen extends React.Component {
   constructor (props) {
     super(props)
 
     this.state = {
       showModal: false,
+      dimensions: {width, height},
       currentDataByStep: dataGame.steps[this.props.count]
     }
   }
 
   toggleModal = () => {
     this.setState({ showModal: !this.state.showModal })
+  }
+
+  onLayout = (evt) => {
+    this.setState({
+      dimensions: {
+        height: evt.nativeEvent.layout.height,
+        width: evt.nativeEvent.layout.width
+      }
+    })
   }
 
   render () {
@@ -37,17 +49,20 @@ class StepScreen extends React.Component {
     // Is last screen ?
     const lastStep = ((dataGame.steps.length - 1) === this.props.count)
 
-    console.tron.display({
-      value: this.props.count
-    })
-
     return (
-      <View style={styles.mainContainer}>
+      <View 
+        style={styles.mainContainer} 
+        onLayout={this.onLayout}
+      >
         <ScrollView style={styles.container}>
 
           <View style={styles.containerMedia} >
             <TouchableOpacity onPress={this.toggleModal}>
-              <Image resizeMode='cover' source={Images.thumbs[this.props.count].th} style={styles.thumbs}>
+              <Image 
+                resizeMode='cover' 
+                source={Images.thumbs[this.props.count].th} 
+                style={{width: this.state.dimensions.width, height: 200}} 
+              >
                 <View
                   style={{
                     backgroundColor: 'transparent',
@@ -59,7 +74,7 @@ class StepScreen extends React.Component {
                   <Icon
                     name='play-circle' size={50} color='white'
                   />
-                </View>
+                </View>          
               </Image>
             </TouchableOpacity>
           </View>
@@ -97,7 +112,9 @@ class StepScreen extends React.Component {
             onRequestClose={this.toggleModal}
             supportedOrientations={['portrait', 'landscape']}
             >
-            <Video source={Images.videos[namevideo]} />
+            <Video 
+              source={Images.videos[namevideo]} 
+            />  
 
             <TouchableOpacity
               style={{
