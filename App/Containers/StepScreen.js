@@ -37,6 +37,10 @@ class StepScreen extends React.Component {
     // Is last screen ?
     const lastStep = ((dataGame.steps.length - 1) === this.props.count)
 
+    console.tron.display({
+      value: this.props.count
+    })
+
     return (
       <View style={styles.mainContainer}>
         <ScrollView style={styles.container}>

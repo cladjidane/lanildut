@@ -12,7 +12,8 @@ const images = {
     { th: require('../Images/game/thumbs-step9.jpg') },
     { th: require('../Images/game/thumbs-step10.jpg') },
     { th: require('../Images/game/thumbs-step11.jpg') },
-    { th: require('../Images/game/thumbs-step12.jpg') }
+    { th: require('../Images/game/thumbs-step12.jpg') },
+    { th: require('../Images/game/thumbs-step1.jpg') } // last screen
   ],
   videos: {
     video1: require('../Fixtures/step-1.mp4'),

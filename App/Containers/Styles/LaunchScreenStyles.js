@@ -51,10 +51,10 @@ export default StyleSheet.create({
     backgroundColor: 'transparent',
     textShadowColor: 'black',
     textShadowOffset: {
-      width: 10,
-      height: 10
+      width: 2,
+      height: 2
     },
-    textShadowRadius: 10
+    textShadowRadius: 5
   },
   titleTextHome: {
     ...Fonts.style.h2,

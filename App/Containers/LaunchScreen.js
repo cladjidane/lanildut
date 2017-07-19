@@ -32,7 +32,7 @@ export default class LaunchScreen extends React.Component {
           </View>
 
           <View style={styles.viewImageMediaHome}>
-            <Image style={styles.imageMediaHome} resizeMode='cover' source={require('../Images/game/thumbs-step2.jpg')}>
+            <Image style={styles.imageMediaHome} resizeMode='cover' source={require('../Images/game/thumbs-step7.jpg')}>
               <Text style={styles.titleGameHome}>Parcours mer</Text>
               <RoundedButton
                 text='Commencer'
