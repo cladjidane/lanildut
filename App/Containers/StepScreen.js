@@ -50,18 +50,18 @@ class StepScreen extends React.Component {
     const lastStep = ((dataGame.steps.length - 1) === this.props.count)
 
     return (
-      <View 
-        style={styles.mainContainer} 
+      <View
+        style={styles.mainContainer}
         onLayout={this.onLayout}
       >
         <ScrollView style={styles.container}>
 
           <View style={styles.containerMedia} >
             <TouchableOpacity onPress={this.toggleModal}>
-              <Image 
-                resizeMode='cover' 
-                source={Images.thumbs[this.props.count].th} 
-                style={{width: this.state.dimensions.width, height: 200}} 
+              <Image
+                resizeMode='cover'
+                source={Images.thumbs[this.props.count].th}
+                style={{width: this.state.dimensions.width, height: 200}}
               >
                 <View
                   style={{
@@ -74,7 +74,7 @@ class StepScreen extends React.Component {
                   <Icon
                     name='play-circle' size={50} color='white'
                   />
-                </View>          
+                </View>
               </Image>
             </TouchableOpacity>
           </View>
@@ -112,9 +112,9 @@ class StepScreen extends React.Component {
             onRequestClose={this.toggleModal}
             supportedOrientations={['portrait', 'landscape']}
             >
-            <Video 
-              source={Images.videos[namevideo]} 
-            />  
+            <Video
+              source={Images.videos[namevideo]}
+            />
 
             <TouchableOpacity
               style={{

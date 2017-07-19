@@ -13,8 +13,7 @@ import RoundedButton from '../Components/RoundedButton'
 
 const { width, height } = Dimensions.get('window')
 
-export default class LaunchScreen extends React.Component {  
-  
+export default class LaunchScreen extends React.Component {
   constructor (props) {
     super(props)
 
@@ -35,7 +34,7 @@ export default class LaunchScreen extends React.Component {
   render () {
     const { navigate } = this.props.navigation
     return (
-      <View 
+      <View
         style={styles.mainContainer}
         onLayout={this.onLayout}
       >
@@ -55,13 +54,13 @@ export default class LaunchScreen extends React.Component {
           </View>
 
           <View style={styles.viewImageMediaHome}>
-            <Image 
-              resizeMode='cover' 
-              source={require('../Images/game/INTRO1.jpg')} 
+            <Image
+              resizeMode='cover'
+              source={require('../Images/game/INTRO1.jpg')}
               style={[styles.imageMediaHome, {
-                flex: 1, 
+                flex: 1,
                 width: this.state.dimensions.width
-              }]} 
+              }]}
             >
               <Text style={styles.titleGameHome}>Parcours mer</Text>
               <RoundedButton

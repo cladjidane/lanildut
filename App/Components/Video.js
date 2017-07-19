@@ -12,7 +12,6 @@ import {
 } from 'react-native'
 
 import Video from 'react-native-video'
-import { Metrics } from '../Themes/'
 
 const { width, height } = Dimensions.get('window')
 
@@ -44,7 +43,7 @@ export default class video extends Component {
         height: evt.nativeEvent.layout.height,
         width: evt.nativeEvent.layout.width
       },
-      resizeMode: evt.nativeEvent.layout.width > evt.nativeEvent.layout.height ? 'cover': 'contain' 
+      resizeMode: evt.nativeEvent.layout.width > evt.nativeEvent.layout.height ? 'cover' : 'contain'
     })
   }
 
@@ -126,11 +125,10 @@ export default class video extends Component {
   }
 
   renderNativeSkin () {
-    const videoStyle = styles.fullScreen
     const source = this.props.source
 
     return (
-      <View 
+      <View
         style={styles.container}
         onLayout={this.onLayout}
       >
@@ -138,7 +136,7 @@ export default class video extends Component {
           <Video
             source={source}
             style={{
-              width: this.state.dimensions.width, 
+              width: this.state.dimensions.width,
               height: this.state.dimensions.height,
               position: 'absolute',
               top: 0,
@@ -146,7 +144,7 @@ export default class video extends Component {
               bottom: 0,
               right: 0,
               backgroundColor: 'black'
-            }} 
+            }}
             resizeMode={this.state.resizeMode}
           />
         </View>
