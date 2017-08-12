@@ -6,9 +6,9 @@ export default StyleSheet.create({
   ...ApplicationStyles.screen,
   // Override definition html
   containerHTMLView: {
+    flex: 1,
     paddingLeft: 0,
     paddingRight: 0,
-    width: Metrics.screenWidth - 130,
     borderRightColor: Colors.border,
     marginRight: 10,
     borderRightWidth: 1
@@ -20,7 +20,8 @@ export default StyleSheet.create({
   p: {
     color: Colors.text,
     textAlign: 'center',
-    borderWidth: 1
+    borderWidth: 1,
+    fontSize: 18
   },
   // Next
   wrapperMap: {
@@ -59,6 +60,7 @@ export default StyleSheet.create({
   },
   closeModal: {
     position: 'absolute',
+    zIndex: 10,
     right: 33,
     top: 33,
     zIndex: 10

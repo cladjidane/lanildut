@@ -6,7 +6,9 @@ export default StyleSheet.create({
   ...ApplicationStyles.screen,
   mainContainer: {
     flex: 1,
-    backgroundColor: Colors.blue
+    backgroundColor: Colors.blue,
+    //borderWidth: 3,
+    //borderColor: 'red'
   },
   launchContainer: {
     flex: 1
@@ -58,7 +60,7 @@ export default StyleSheet.create({
   },
   titleTextHome: {
     ...Fonts.style.h2,
-    fontSize: 40,
+    fontSize: 34,
     fontWeight: 'bold',
     color: Colors.snow,
     textAlign: 'center',

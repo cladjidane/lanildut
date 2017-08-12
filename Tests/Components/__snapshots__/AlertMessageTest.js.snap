@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`AlertMessage component does not render if show is false 1`] = `null`;

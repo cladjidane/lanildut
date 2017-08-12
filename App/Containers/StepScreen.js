@@ -1,10 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Dimensions, Modal, View, ScrollView, Text, TouchableOpacity, Image } from 'react-native'
 import { connect } from 'react-redux'
-import { Images } from '../Themes'
-
-// Data
-import dataGame from '../Fixtures/game.json'
+import { Colors, Images } from '../Themes'
 
 // Styles
 import styles from './Styles/StepScreenStyle'
@@ -17,19 +14,32 @@ import HTMLView from 'react-native-htmlview'
 
 const { width, height } = Dimensions.get('window')
 
-class StepScreen extends React.Component {
+class StepScreen extends Component {
   constructor (props) {
     super(props)
 
     this.state = {
       showModal: false,
+      showTextPlus: false,
+      titleTextPlus: 'En savoir plus',
       dimensions: {width, height},
-      currentDataByStep: dataGame.steps[this.props.count]
+      currentDataByStep: this.props.datacurrentstep
     }
+  }
+
+  showTextPlus = () => {
+    this.setState({
+      showTextPlus: !this.state.showTextPlus,
+      titleTextPlus: this.state.titleTextPlus === 'En savoir plus' ? 'Fermer' : 'En savoir plus'
+    })
   }
 
   toggleModal = () => {
     this.setState({ showModal: !this.state.showModal })
+  }
+
+  componentDidMount = () => {
+    this.props.steper()
   }
 
   onLayout = (evt) => {
@@ -41,18 +51,39 @@ class StepScreen extends React.Component {
     })
   }
 
+  _renderTextPlus = () => {
+    if (this.state.showTextPlus) {
+      return (
+        <View style={{padding: 20, backgroundColor: Colors.border}}>
+          <HTMLView
+            value={this.state.currentDataByStep.step.text_plus}
+            stylesheet={styles.html}
+            />
+        </View>
+      )
+    } else {
+      return null
+    }
+  }
+
   render () {
     const { navigate } = this.props.navigation
     const currentDataByStep = this.state.currentDataByStep
-    const namevideo = 'video' + (this.props.count + 1)
+    const namevideo = 'video' + (this.props.count)
 
     // Is last screen ?
-    const lastStep = ((dataGame.steps.length - 1) === this.props.count)
+    const lastStep = ((this.props.datagame.steps.length - 2) === this.props.count)
+    /*
+    console.tron.display({
+      name: currentDataByStep.orientation.title,
+      preview: 'Step step ' + this.props.count
+    })
+    */
 
     return (
       <View
         style={styles.mainContainer}
-        onLayout={this.onLayout}
+        //onLayout={this.onLayout}
       >
         <ScrollView style={styles.container}>
 
@@ -86,12 +117,31 @@ class StepScreen extends React.Component {
             <View style={styles.containerHTMLView}>
               <HTMLView
                 value={currentDataByStep.step.text}
-                stylesheet={styles.html}
+                stylesheet={styles}
               />
-              <HTMLView
-                value={currentDataByStep.step.text_plus}
-                stylesheet={styles.html}
-              />
+
+              {this.state.currentDataByStep.step.text_plus.length > 0 &&
+                <TouchableOpacity
+                  onPress={this.showTextPlus}
+                  style={{
+                    paddingVertical: 10,
+                    marginTop: 30,
+                    borderTopWidth: 1,
+                    borderTopColor: Colors.border,
+                    flex: 1,
+                    flexDirection: 'row',
+                    justifyContent: 'center'
+                  }}
+                >
+                  <Text>
+                    <Icon name='plus' size={15} color={Colors.red} />
+                    <Text> {this.state.titleTextPlus}</Text>
+                  </Text>
+                </TouchableOpacity>
+              }
+
+              {this._renderTextPlus()}
+
             </View>
 
             <RoundedButton
@@ -136,14 +186,16 @@ class StepScreen extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    count: state.game.count
+    count: state.game.count,
+    datacurrentstep: state.game.datacurrentstep,
+    datagame: state.game.datagame
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    increment: () => { dispatch({ type: 'INCREMENT' }) }
-    // decrement: () => { dispatch({ type: 'DECREMENT' }) }
+    increment: () => { dispatch({ type: 'INCREMENT' }) },
+    steper: () => { dispatch({ type: 'STEPER' }) }
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(StepScreen)

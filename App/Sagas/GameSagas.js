@@ -10,18 +10,48 @@
 *    you'll need to define a constant in that file.
 *************************************************************/
 
-import { call, put } from 'redux-saga/effects'
+import { call, put, select } from 'redux-saga/effects'
 import GameActions from '../Redux/GameRedux'
 
-export function * getGame (api, action) {
-  console.tron.display({
-    name: '🔥 GameSagas.js 🔥',
-    preview: 'On lance la saga game',
-    value: {
-      action
-    }
-  })
 
+// gets the current screen from navigation state
+export const getCurrentRouteName = (state) => {
+
+  const route = state.nav.routes[state.nav.index]
+  // dive into nested navigators
+  if (route.routes) {
+    return getCurrentRouteName(route)
+  }
+  return route.routeName
+  
+}
+
+export function * updateCurrentStep (NavigationActions, action) {
+  const currentScreen = yield select(getCurrentRouteName)
+
+  //console.tron.log(NavigationActions)
+  //console.tron.log(NavigationActions.StateUtils.indexOf)
+
+  if(currentScreen === 'StepScreen') yield put(GameActions.decrement())
+
+  //const result = next(action)
+
+  // const result = next(action)
+  // const nextScreen = getCurrentRouteName(getState().nav)
+  // if (nextScreen !== currentScreen) {
+  //   try {
+  //     if(nextScreen === 'StepScreen' && action.type === 'Navigation/BACK') {
+  //       console.tron.log(getState)
+  //     }
+      
+  //     // Example: Analytics.trackEvent('user_navigation', {currentScreen, nextScreen})
+  //   } catch (e) {
+  //     console.tron.log(e)
+  //   }
+  // }
+}
+
+export function * getGame (api, action) {
   const { data } = action
 
   // On appelle l'API pour sortir les datas qui nous faut

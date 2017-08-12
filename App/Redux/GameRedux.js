@@ -1,6 +1,9 @@
 import { createReducer, createActions } from 'reduxsauce'
 import Immutable from 'seamless-immutable'
 
+// Data
+import datagame from '../Fixtures/game.json'
+
 /* ------------- Types and Action Creators ------------- */
 
 const { Types, Creators } = createActions({
@@ -22,7 +25,9 @@ export const INITIAL_STATE = Immutable({
   fetching: null,
   game: null,
   error: null,
-  count: 0
+  count: 1,
+  datagame: datagame,
+  datacurrentstep: datagame.steps[1]
 })
 
 /* ------------- Reducers ------------- */
@@ -45,12 +50,14 @@ export const failure = state =>
 // Increments
 export const increment = (state, { action }) => {
   const count = state.count + 1
-  return state.merge({ count })
+  const datacurrentstep = state.datagame.steps[count]
+  return state.merge({ count, datacurrentstep })
 }
 
 export const decrement = (state, { action }) => {
   const count = state.count - 1
-  return state.merge({ count })
+  const datacurrentstep = state.datagame.steps[count]
+  return state.merge({ count, datacurrentstep })
 }
 
 export const resetGame = (state, { action }) => {

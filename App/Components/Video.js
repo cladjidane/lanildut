@@ -1,13 +1,12 @@
 'use strict'
-import React, {
-  Component
-} from 'react'
+import React, { Component } from 'react'
 
 import {
   Dimensions,
   StyleSheet,
   Text,
   TouchableOpacity,
+  TouchableWithoutFeedback,
   View
 } from 'react-native'
 
@@ -29,7 +28,7 @@ export default class video extends Component {
     duration: 0.0,
     currentTime: 0.0,
     controls: false,
-    paused: true,
+    paused: false,
     skin: 'embed',
     ignoreSilentSwitch: null,
     isBuffering: false,
@@ -133,20 +132,23 @@ export default class video extends Component {
         onLayout={this.onLayout}
       >
         <View style={styles.fullScreen}>
-          <Video
-            source={source}
-            style={{
-              width: this.state.dimensions.width,
-              height: this.state.dimensions.height,
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              bottom: 0,
-              right: 0,
-              backgroundColor: 'black'
-            }}
-            resizeMode={this.state.resizeMode}
+          <TouchableWithoutFeedback onPress={() => { this.setState({paused: !this.state.paused}) }}>
+            <Video
+              source={source}
+              paused={this.state.paused}
+              style={{
+                width: this.state.dimensions.width,
+                height: this.state.dimensions.height,
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                bottom: 0,
+                right: 0,
+                backgroundColor: 'black'
+              }}
+              resizeMode={this.state.resizeMode}
           />
+          </TouchableWithoutFeedback>
         </View>
 
       </View>

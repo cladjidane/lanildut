@@ -15,7 +15,7 @@ class RootContainer extends Component {
       this.props.startup()
     }
   }
-
+  
   render () {
     return (
       <View style={styles.applicationView}>

@@ -14,21 +14,22 @@ class FullMapScreen extends React.Component {
     super(props)
 
     var lat = '48.47074466655615'
-    var lng = '-4.756929874420166'
+    var lng = '-4.761029874420166'
     // var SPACE = 0.01
 
     this.state = {
       region: {
         latitude: parseFloat(lat),
         longitude: parseFloat(lng),
-        latitudeDelta: 0.00922,
-        longitudeDelta: 0.00421
+        latitudeDelta: 0.00822,
+        longitudeDelta: 0.00321
       }
     }
   }
 
   MarkerMap () {
     return dataGame.steps.map(function (step, i) {
+      if(i === 0 || i === dataGame.steps.length - 1 ) return
       const coor = {
         latitude: parseFloat(step.orientation.latitude + 0.01),
         longitude: parseFloat(step.orientation.longitude + 0.01)
@@ -41,7 +42,7 @@ class FullMapScreen extends React.Component {
       */
       return (
         <View key={i}>
-          <MapView.Marker coordinate={coor} />
+          <MapView.Marker title={step.orientation.title} coordinate={coor} />
         </View>
       )
     })

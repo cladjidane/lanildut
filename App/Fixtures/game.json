@@ -1,17 +1,20 @@
 {
-  "introduction": {
-    "name_application": "Lanildut",
-    "title_home": "Bienvenue \u00e0 Lanildut",
-    "title_home_breton": "Degemer mat e Lannildud",
-    "text_intro": "<p><strong>Laissez-vous</strong> guider par cette balade interactive en 12 \u00e9tapes, qui vous emm\u00e8nera durant environ 1H30 \u00e0 la d\u00e9couverte des secrets et des histoires d&rsquo;un incroyable patrimoine\u00a0!<\/p>"
-  },
   "steps": [{
+    "id": 0,
+    "introduction": {
+      "name_application": "Secrets d'Iroise",
+      "title_home": "Bienvenue \u00e0 Lanildut",
+      "title_home_breton": "Degemer mat e Lannildud",
+      "text_intro": "<p>Laissez-vous guider par cette balade interactive en 12 \u00e9tapes, qui vous emm\u00e8nera durant environ 1H30 \u00e0 la d\u00e9couverte des secrets et des histoires d&rsquo;un incroyable patrimoine\u00a0!<\/p>"
+    }
+  }, {
+    "id": 1,
     "orientation": {
       "title": "Le port des go\u00e9moniers",
       "title_breton": "Ar porzh a bezhinaerien",
-      "desc": "<p>Rendez-vous devant l'office de tourisme, <br />face au port</p>",
-      "time": "Départ",
-      "accessibility": "<p>Découverte du parcours</p>",
+      "desc": "<p>Pour commencer la balade, rendez vous sur la passerelle donnant sur le port. Elle se situe \u00e0 l&rsquo;arri\u00e8re de l&rsquo;office de tourisme.<\/p>",
+      "time": "",
+      "accessibility": "Départ de la balade",
       "latitude": "48.470712,",
       "longitude": "-4.756994"
     },
@@ -19,79 +22,84 @@
       "video_name": "step-1.mp4",
       "video_thumbnail": "step-1.jpg",
       "text": "<p>Vous \u00eates devant le premier port europ\u00e9en de d\u00e9chargement du go\u00e9mon. Plus de 35 000 tonnes d&rsquo;algues y transitent chaque ann\u00e9e. Charg\u00e9es dans des camions, elles sont envoy\u00e9es vers des usines de la r\u00e9gion pour servir ensuite dans l&rsquo;alimentation ou les cosm\u00e9tiques&#8230;<\/p>",
-      "text_plus": "<p><span ><b><i>Vous voulez en savoir plus sur la passionnante histoire des go\u00e9moniers?\u00a0<\/i><\/b><\/span><\/p><p>Rendez-vous \u00e0 la Maison de l&rsquo;algue, dans le b\u00e2timent de l&rsquo;Office du Tourisme, apr\u00e8s votre balade\u00a0!<\/p><p><i>Entr\u00e9e gratuite <\/i><\/p><p><span ><i>Vous pouvez vous y<span class=\"Apple-converted-space\">\u00a0 <\/span>procurer le DVD du documentaire de Fr\u00e9d\u00e9ric Rabaud et de Florence Riou : \u00ab\u00a0Des hommes et des algues\u00a0\u00bb.<\/i><\/span><\/p>"
+      "text_plus": "<p><strong>Vous voulez en savoir plus sur la passionnante histoire des go\u00e9moniers ?<\/strong>Rendez-vous \u00e0 la Maison de l&rsquo;algue, dans le b\u00e2timent de l&rsquo;Office du Tourisme, apr\u00e8s votre balade\u00a0!<br \/><strong>Entr\u00e9e gratuite<br \/><\/strong>Vous pouvez vous y\u00a0 procurer le DVD du documentaire de Fr\u00e9d\u00e9ric Rabaud et de Florence Riou : \u00ab\u00a0Des hommes et des algues\u00a0\u00bb.<\/p>"
     }
   }, {
+    "id": 2,
     "orientation": {
       "title": "Au temps des gabares",
       "title_breton": "Da vare ar gobiri",
       "desc": "<p>Empruntez les escaliers sur votre droite et dirigez-vous vers la plage, \u00e0 droite.<\/p>",
-      "time": "à 1 min",
-      "accessibility": "<p class=\"TableContents\">Pour les personnes en fauteuil roulant ou avec des poussettes, vous pouvez contourner le restaurant \u00ab\u00a0L&rsquo;abri c\u00f4tier\u00a0\u00bb et descendre en direction de la petite plage situ\u00e9e derri\u00e8re le mur.<\/p><p class=\"TableContents\">Des toilettes sont \u00e0 votre disposition en bas des escaliers.<\/p>",
+      "time": "1 min",
+      "accessibility": "<p>Pour les personnes en fauteuil roulant ou avec des poussettes, vous pouvez contourner le restaurant \u00ab\u00a0L&rsquo;abri c\u00f4tier\u00a0\u00bb et descendre en direction de la petite plage situ\u00e9e derri\u00e8re le mur.<br \/>Des toilettes sont \u00e0 votre disposition en bas des escaliers.<\/p>",
       "latitude": "48.470370",
       "longitude": "-4.757255"
     },
     "step": {
       "video_name": "step-2.mp4",
       "video_thumbnail": "step-2.jpg",
-      "text": "<p>Les gabares sont des navires traditionnels d\u00e9di\u00e9s au transport des marchandises et \u00e0 l&rsquo;extraction de sable.<\/p><p>Au XIX\u00b0 si\u00e8cle, l&rsquo;Aber Ildut \u00e9tait principalement anim\u00e9 par l&rsquo;activit\u00e9 de ces bateaux. Cette exploitation a permis de fournir une grande partie du mortier n\u00e9cessaire \u00e0 la r\u00e9alisation de nombreux ouvrages d&rsquo;art de la r\u00e9gion brestoise, engag\u00e9e dans la R\u00e9volution Industrielle.<\/p><p>Cette activit\u00e9 s&rsquo;est arr\u00eat\u00e9e en 1995.<\/p>",
-      "text_plus": "<p><span >En 1905, 1 215 navires sont entr\u00e9s dans le port de l&rsquo;Aber-lldut, apportant pr\u00e8s de 2 000 tonnes de marchandises\u00a0: engrais, \u00e9toffes, vins&#8230;et exportant plus de 45.000 tonnes de granite.<\/span><\/p>"
+      "text": "<p>Les gabares sont des navires traditionnels d\u00e9di\u00e9s au transport des marchandises et \u00e0 l&rsquo;extraction de sable.<br \/>Au XIX\u00b0 si\u00e8cle, l&rsquo;Aber Ildut \u00e9tait principalement anim\u00e9 par l&rsquo;activit\u00e9 de ces bateaux. Cette exploitation a permis de fournir une grande partie du mortier n\u00e9cessaire \u00e0 la r\u00e9alisation de nombreux ouvrages d&rsquo;art de la r\u00e9gion brestoise, engag\u00e9e dans la R\u00e9volution Industrielle.<br \/>Cette activit\u00e9 s&rsquo;est arr\u00eat\u00e9e en 1995.<\/p>",
+      "text_plus": "<p>En 1905, 1 215 navires sont entr\u00e9s dans le port de l&rsquo;Aber-lldut, apportant pr\u00e8s de 2 000 tonnes de marchandises\u00a0: engrais, \u00e9toffes, vins&#8230;et exportant plus de 45.000 tonnes de granite.<\/p>"
     }
   }, {
+    "id": 3,
     "orientation": {
       "title": "Le four \u00e0 go\u00e9mon",
       "title_breton": "Ar fourn bezhin",
-      "desc": "<p>Faite demi-tour et remontez en direction du sentier c\u00f4tier sur votre gauche. Arr\u00eatez-vous devant le four \u00e0 go\u00e9mon qui est indiqu\u00e9 par une plaque explicative.<\/p>",
+      "desc": "<p>Faites demi-tour et remontez en direction du sentier c\u00f4tier sur votre gauche. Arr\u00eatez-vous devant le four \u00e0 go\u00e9mon qui est indiqu\u00e9 par une plaque explicative.<\/p>",
       "time": "3 min",
-      "accessibility": "<p class=\"TableContents\">Accessible aux personnes en fauteuil roulant et avec des poussettes, mais passage parfois \u00e9troit et d\u00e9form\u00e9.<\/p><p class=\"TableContents\">Pour plus de confort vous pouvez empruntez la route de la maison-feu.<\/p>",
+      "accessibility": "<p>Accessible aux personnes en fauteuil roulant et avec des poussettes, mais passage parfois \u00e9troit et d\u00e9form\u00e9.<br \/>Pour plus de confort vous pouvez emprunter la route de la maison-feu.<\/p>",
       "latitude": "48.470619,",
       "longitude": "-4.757789"
     },
     "step": {
       "video_name": "step-3.mp4",
       "video_thumbnail": "step-3.jpg",
-      "text": "<p>Ce four servait autrefois \u00e0 faire br\u00fbler le go\u00e9mon. Ces algues \u00e9taient d&rsquo;abord r\u00e9colt\u00e9es par les hommes \u00e0 bord de leurs bateaux. Les femmes descendaient ensuite sur la gr\u00e8ve remplir leurs charrettes, puis faisaient s\u00e9cher le go\u00e9mon sur la dune avant de le faire br\u00fbler dans le four.<\/p><p>La cendre devenait un bloc compact appel\u00e9 \u00ab\u00a0pain de soude\u00a0\u00bb qui \u00e9tait ensuite transport\u00e9 vers les usines.<\/p>",
-      "text_plus": "<p>Les fours \u00e0 go\u00e9mon sont, la plupart du temps, orient\u00e9s perpendiculairement aux vents dominants pour qu&rsquo;ils se r\u00e9activent tout seul.<\/p><p>Lors du br\u00fblage, les algues d\u00e9gageaient une fum\u00e9e \u00e9paisse et \u00e2cre qui se rabattait sur les dunes. On invitait les enfants \u00e0 traverser ce rideau car on disait que les fum\u00e9es ultra-iod\u00e9es avaient des vertus fortifiantes pour les bronches.<\/p>"
+      "text": "<p>Ce four servait autrefois \u00e0 faire br\u00fbler le go\u00e9mon. Ces algues \u00e9taient d&rsquo;abord r\u00e9colt\u00e9es par les hommes \u00e0 bord de leurs bateaux. Les femmes descendaient ensuite sur la gr\u00e8ve remplir leurs charrettes, puis faisaient s\u00e9cher le go\u00e9mon sur la dune avant de le faire br\u00fbler dans le four.<br \/>La cendre devenait un bloc compact appel\u00e9 \u00ab\u00a0pain de soude\u00a0\u00bb qui \u00e9tait ensuite transport\u00e9 vers les usines. Ces pains de soude servaient pour l'industrie du verre et l'extraction de l'iode.<\/p>",
+      "text_plus": "<p>Les fours \u00e0 go\u00e9mon sont, la plupart du temps, orient\u00e9s perpendiculairement aux vents dominants pour qu&rsquo;ils se r\u00e9activent tout seul.<br \/>Lors du br\u00fblage, les algues d\u00e9gageaient une fum\u00e9e \u00e9paisse et \u00e2cre qui se rabattait sur les dunes. On invitait les enfants \u00e0 traverser ce rideau car on disait que les fum\u00e9es ultra-iod\u00e9es avaient des vertus fortifiantes pour les bronches.<\/p>"
     }
   }, {
+    "id": 4,
     "orientation": {
       "title": "Les passeurs",
       "title_breton": "Ar bageerien",
       "desc": "<p>Descendez en contrebas et si vous le pouvez, placez vous au bout de la digue, sur ce gros rocher appel\u00e9 le rocher du Crapaud.<\/p>",
-      "time": "à 2 min",
-      "accessibility": "<p class=\"TableContents\">Non accessible aux fauteuils roulants et poussettes, mais vous pouvez rester sur le sentier pour \u00e9couter l&rsquo;\u00e9tape \u00ab\u00a0Les passeurs\u00a0\u00bb.<\/p>",
+      "time": "2 min",
+      "accessibility": "<p>Non accessible aux fauteuils roulants et poussettes, mais vous pouvez rester sur le sentier pour \u00e9couter l&rsquo;\u00e9tape \u00ab\u00a0Les passeurs\u00a0\u00bb.<\/p>",
       "latitude": "48.470283,",
       "longitude": "-4.759819"
     },
     "step": {
-      "video_name": "step-4.mp4",
-      "video_thumbnail": "step-4.jpg",
-      "text": "<p class=\"Standard\">A l\u2019 endroit le plus \u00e9troit de l\u2019Aber Ildut, 150 m\u00e8tres nous s\u00e9parent de Porscave, le port situ\u00e9 juste en face. Mais si l&rsquo;on contourne la rivi\u00e8re en prenant la route, cela repr\u00e9sente plus de 10 kilom\u00e8tres !<br \/>C&rsquo;est pour cela que de 1922 \u00e0 1980, ce sont des passeurs qui ont assur\u00e9 la travers\u00e9e \u00e0 bord de leur canot \u00e0 rames, en \u00e9change d\u2019une pi\u00e8ce de monnaie.<\/p>",
+      "video_name": "step-X.mp4",
+      "video_thumbnail": "step-X.jpg",
+      "text": "<p>A l\u2019 endroit le plus \u00e9troit de l\u2019Aber Ildut, 150 m\u00e8tres nous s\u00e9parent de Porscave, le port situ\u00e9 juste en face. Mais si l&rsquo;on contourne la rivi\u00e8re en prenant la route, cela repr\u00e9sente plus de 10 kilom\u00e8tres !<br \/>C&rsquo;est pour cela que de 1922 \u00e0 1980, ce sont des passeurs qui ont assur\u00e9 la travers\u00e9e \u00e0 bord de leur canot \u00e0 rames, en \u00e9change d\u2019une pi\u00e8ce de monnaie.<\/p>",
       "text_plus": "<p>Suivant les \u00e9poques, les habitants ont utilis\u00e9 diff\u00e9rents moyens pour traverser l&rsquo;Aber Ildut\u00a0:<br \/>Autrefois, un passage \u00e0 gu\u00e9 permettait de traverser l\u2019aber, mais il n\u2019\u00e9tait franchissable qu\u2019\u00e0 mar\u00e9e basse.<br \/>Il sera remplac\u00e9 en 1821 par un service de bac permettant de traverser toute la journ\u00e9e.<br \/>Pendant la Seconde Guerre mondiale, les Allemands ont construit un pont en bois qui sera d\u00e9truit en ao\u00fbt 1944.<\/p>"
     }
   }, {
+    "id": 5,
     "orientation": {
       "title": "Les blockhaus de la guerre",
       "title_breton": "Blockhoso\u00f9 ar brezel",
-      "desc": "<p>Faite quelques m\u00e8tres sur le chemin c\u00f4tier, vous arrivez devant un blockhaus.<\/p>",
+      "desc": "<p>Sur votre gauche, vous pouvez apercevoir 2 blocs de b\u00e9ton. Rejoignez le chemin c\u00f4tier et faites quelques m\u00e8tres, vous arrivez devant un blockhaus.<\/p>",
       "time": "1 min",
       "accessibility": "<p>Accessible aux personnes en fauteuil roulant et avec des poussettes.<\/p>",
       "latitude": "48.471239,",
       "longitude": "-4.760520"
     },
     "step": {
-      "video_name": "step-5.mp4",
-      "video_thumbnail": "step-5.jpg",
-      "text": "<p class=\"Textbody\">On peut apercevoir ici les vestiges d&rsquo;un blockhaus et de deux petits ouvrages en b\u00e9ton.<br \/>En 1942, le Mur de l&rsquo;Atlantique commence \u00e0 se construire avec l&rsquo;\u00e9dification de forteresses et de multiples points d&rsquo;appuis comme ici \u00e0 Lanildut.<br \/>Si vous ouvrez bien les yeux, vous apercevrez \u00e9galement sur les rochers des traces de b\u00e9ton et de piquets en fer datant de la guerre.<\/p>",
+      "video_name": "step-X.mp4",
+      "video_thumbnail": "step-X.jpg",
+      "text": "<p>On peut apercevoir ici les vestiges d&rsquo;un blockhaus et de deux petits ouvrages en b\u00e9ton.<br \/>En 1942, le Mur de l&rsquo;Atlantique commence \u00e0 se construire avec l&rsquo;\u00e9dification de forteresses et de multiples points d&rsquo;appuis comme ici \u00e0 Lanildut.<br \/>Si vous ouvrez bien les yeux, vous apercevrez \u00e9galement sur les rochers des traces de b\u00e9ton et de piquets en fer datant de la guerre.<\/p>",
       "text_plus": "<p>Ne manquez pas de visiter le mus\u00e9e M\u00e9moires 39-45 install\u00e9 dans un v\u00e9ritable blockhaus \u00e0 Plougonvelin, pr\u00e8s de la pointe Saint-Mathieu.<br \/>A travers les cinq \u00e9tages de cet ancien poste de commandement allemand, vous d\u00e9couvrirez la vie quotidienne des soldats sur le Mur de l&rsquo;Atlantique.<br \/>Renseignements\u00a0: 02 29 02 84 56<\/p>"
     }
   }, {
+    "id": 6,
     "orientation": {
       "title": "La batterie \/D\u00e9fendre et surveiller l'Aber Ildut",
       "title_breton": "Ar strollad kanolio\u00f9 \/ Difenn ha diwall an \u00ab\u00a0Aber Ildut\u00a0\u00bb",
       "desc": "<p>Longez le sentier c\u00f4tier jusqu&rsquo;au canon\u00a0!<\/p>",
       "time": "3 min",
-      "accessibility": "<p class=\"TableContents\">Accessible aux personnes en fauteuil roulant et avec des poussettes.<\/p>",
+      "accessibility": "<p>Accessible aux personnes en fauteuil roulant et avec des poussettes.<\/p>",
       "latitude": "48.472114,",
       "longitude": "-4.762640"
     },
@@ -102,10 +110,11 @@
       "text_plus": "<p>A l&rsquo;\u00e9poque de ces batteries, toutes les communes situ\u00e9es \u00e0 moins de 8 km du littoral devaient fournir des hommes pour assurer le \u00ab\u00a0guet de la mer\u00a0\u00bb et la man\u0153uvre du canon en temps de guerre. Ils \u00e9taient tir\u00e9s au sort parmi des hommes de 16 \u00e0 60 ans et devaient surveiller l&rsquo;horizon.<\/p>"
     }
   }, {
+    "id": 7,
     "orientation": {
       "title": "La mer d'Iroise",
       "title_breton": "Ar mor hirwarzh",
-      "desc": "<p class=\"TableContents\">Continuez sur le sentier c\u00f4tier et profitez de la vue. Arr\u00eatez-vous sur un banc face \u00e0 la mer apr\u00e8s la premi\u00e8re route sur votre droite.<\/p>",
+      "desc": "<p>Continuez sur le sentier c\u00f4tier et profitez de la vue. Apr\u00e8s 3 minutes de marche, arr\u00eatez-vous sur le banc en pierre face \u00e0 la mer apr\u00e8s la premi\u00e8re route sur votre droite.<\/p>",
       "time": "3 min 30",
       "accessibility": "<p>Accessible aux personnes en fauteuil roulant et avec des poussettes.<\/p>",
       "latitude": "48.473881,",
@@ -114,10 +123,11 @@
     "step": {
       "video_name": "step-7.mp4",
       "video_thumbnail": "step-7.jpg",
-      "text": "<p>Face \u00e0 vous, la mer d&rsquo;Iroise et le parc naturel marin d\u2019Iroise cr\u00e9\u00e9 en 2007.<\/p><p>Son r\u00f4le est notamment de g\u00e9rer ce patrimoine naturel exceptionnel et de prot\u00e9ger la biodiversit\u00e9 de ces eaux.<\/p><p>Si la m\u00e9t\u00e9o vous le permet, vous pourrez voir les \u00eeles.<\/p><p>De gauche \u00e0 droite : B\u00e9niguet, Qu\u00e9m\u00e9n\u00e8s, Tri\u00e9len, l&rsquo;archipel de Mol\u00e8ne, Bannalec, Bannec et Ouessant.<\/p>",
+      "text": "<p>Face \u00e0 vous, la mer d&rsquo;Iroise et le parc naturel marin d\u2019Iroise cr\u00e9\u00e9 en 2007.<br \/>Son r\u00f4le est notamment de g\u00e9rer ce patrimoine naturel exceptionnel et de prot\u00e9ger la biodiversit\u00e9 de ces eaux.<br \/>Si la m\u00e9t\u00e9o vous le permet, vous pourrez voir les \u00eeles.<br \/>De gauche \u00e0 droite : B\u00e9niguet, Qu\u00e9m\u00e9n\u00e8s, Tri\u00e9len, l&rsquo;archipel de Mol\u00e8ne, Bannalec, Bannec et Ouessant.<\/p>",
       "text_plus": "<p>Autour de Mol\u00e8ne, il y a peu de fond, car nous sommes dans le prolongement du plateau continental. A l&rsquo;\u00e9poque pr\u00e9historique, les hommes pouvaient rejoindre l&rsquo;\u00eele \u00e0 pied.<\/p>"
     }
   }, {
+    "id": 8,
     "orientation": {
       "title": "La maison du douanier",
       "title_breton": "Ti ar maltouter",
@@ -134,10 +144,11 @@
       "text_plus": ""
     }
   }, {
+    "id": 9,
     "orientation": {
       "title": "La carri\u00e8re du Cl\u00e9guer",
       "title_breton": "Ar mengleuz dorc'h \u00ab\u00a0Kl\u00e9guer\u00a0\u00bb",
-      "desc": "<p class=\"TableContents\">Continuez sur le sentier jusqu&rsquo;\u00e0 l&rsquo;amas de granite rose que vous apercevez au loin. A l&rsquo;intersection, prenez \u00e0 gauche sur la carri\u00e8re du Cl\u00e9guer.<\/p>",
+      "desc": "<p>Continuez sur le sentier jusqu&rsquo;\u00e0 l&rsquo;amas de granite rose que vous apercevez au loin. A l&rsquo;intersection, prenez \u00e0 gauche sur la carri\u00e8re du Cl\u00e9guer.<\/p>",
       "time": "6 min",
       "accessibility": "<p>Passage fort \u00e9troit entre deux pierres apr\u00e8s la maison du douanier et quelques pierres sur le sentier peuvent g\u00eaner l&rsquo;accessibilit\u00e9.<\/p>",
       "latitude": "48.478947,",
@@ -146,14 +157,15 @@
     "step": {
       "video_name": "step-9.mp4",
       "video_thumbnail": "step-9.jpg",
-      "text": "<p>Vous voici au c\u0153ur d&rsquo;une ancienne carri\u00e8re de granite dont l&rsquo;exploitation a anim\u00e9 Lanildut d\u00e8s le milieu du XIX\u00b0 si\u00e8cle. En 1905, ce sont plus de 45 000 tonnes de granite qu&rsquo;exporte la commune.<\/p><p>Ces pierres serviront \u00e0 l&rsquo;\u00e9dification de nombreux b\u00e2timents de la r\u00e9gion tels que des phares de la mer d&rsquo;Iroise, des chapelles, ou des manoirs. Certaines d&rsquo;entre-elles se retrouveront m\u00eame bien plus loin loin, jusqu\u00a0&lsquo;aux quais de la Tamise \u00e0 Londres\u00a0!<\/p>",
+      "text": "<p>Vous voici au c\u0153ur d&rsquo;une ancienne carri\u00e8re de granite dont l&rsquo;exploitation a anim\u00e9 Lanildut d\u00e8s le milieu du XIX\u00b0 si\u00e8cle. En 1905, ce sont plus de 45 000 tonnes de granite qu&rsquo;exporte la commune.<br \/>Ces pierres serviront \u00e0 l&rsquo;\u00e9dification de nombreux b\u00e2timents de la r\u00e9gion tels que des phares de la mer d&rsquo;Iroise, des chapelles, ou des manoirs. Certaines d&rsquo;entre-elles se retrouveront m\u00eame bien plus loin loin, jusqu\u00a0&lsquo;aux quais de la Tamise \u00e0 Londres\u00a0!<\/p>",
       "text_plus": ""
     }
   }, {
+    "id": 10,
     "orientation": {
       "title": "Au temps des vacances",
       "title_breton": "Da vare ar vaka\u00f1so\u00f9",
-      "desc": "<p class=\"TableContents\">Faites demi-tour et remontez toujours tout droit jusqu&rsquo;\u00e0 la grande route.<\/p><p class=\"TableContents\">Empruntez-la pendant 30 m\u00e8tres et tournez tout de suite \u00e0 droite sur le Ruludu.<\/p><p class=\"TableContents\">Arr\u00eatez vous au niveau du lavoir au bout de la rue.<\/p>",
+      "desc": "<p>Faites demi-tour et revenez sur vos pas. Restez sur la route bitum\u00e9e jusqu&rsquo;\u00e0 la grande route.<br \/>Empruntez-la pendant 30 m\u00e8tres et apr\u00e8s l&rsquo;arr\u00eat de car, tournez tout de suite \u00e0 droite sur le Ruludu.<br \/>Arr\u00eatez vous au niveau du lavoir au bout de la rue.<\/p>",
       "time": "7 min",
       "accessibility": "<p>Accessible pour tous<\/p>",
       "latitude": "48.476280,",
@@ -166,10 +178,11 @@
       "text_plus": "<p>Pors an Eis Vinis voudrait dire en breton\u00a0: port d&rsquo;orge et de bl\u00e9 ou bien le port aux huit c\u00e9r\u00e9ales car il aurait \u00e9t\u00e9 un lieu de transit de c\u00e9r\u00e9ales. Les Ouessantins, qui ne disposaient que de moulins \u00e0 vent, \u00e9taient amen\u00e9s \u00e0 faire moudre leurs grains sur le continent lors de p\u00e9riodes o\u00f9 le vent ne soufflait pas.<\/p>"
     }
   }, {
+    "id": 11,
     "orientation": {
       "title": "Le balisage du port",
       "title_breton": "Merko\u00f9 hentcha\u00f1 ar porzh",
-      "desc": "<p>Depuis le lavoir, prenez \u00e0 droite en direction de la mer et reprenez le sentier c\u00f4tier par la gauche. Arr\u00eatez vous sur le banc juste avant les canons de la batterie.<\/p>",
+      "desc": "<p>Depuis le lavoir, prenez \u00e0 droite en direction de la mer et reprenez le sentier c\u00f4tier par la gauche. Arr\u00eatez vous sur le banc en bois, en face des balises vertes et rouges qui se trouvent dans la mer \u00e0 l&rsquo;entr\u00e9e du port.<\/p>",
       "time": "4 min",
       "accessibility": "<p>Accessible pour tous<\/p>",
       "latitude": "48.471765,",
@@ -182,10 +195,11 @@
       "text_plus": "<p>La grosse balise \u00e0 la sortie du port s&rsquo;appelle \u00ab\u00a0le Lieu\u00a0\u00bb, c&rsquo;est la balise \u00ab\u00a0Babord\u00a0\u00bb (gauche). Il n&rsquo;est pas rare de voir perch\u00e9 \u00e0 son sommet un go\u00e9land ou un cormoran.<\/p>"
     }
   }, {
+    "id": 12,
     "orientation": {
       "title": "La maison-feu",
       "title_breton": "An ti-tan",
-      "desc": "<p class=\"TableContents\">Apr\u00e8s avoir pass\u00e9 les blockhaus, prenez \u00e0 gauche et placez vous face \u00e0 la maison feu, cette grande b\u00e2tisse blanche avec sa fen\u00eatre rouge.<\/p>",
+      "desc": "<p>Continuez sur le sentier et apr\u00e8s avoir pass\u00e9 les blockhaus, prenez \u00e0 gauche et placez vous face \u00e0 la maison feu, cette grande b\u00e2tisse blanche avec sa fen\u00eatre rouge.<\/p>",
       "time": "2 min",
       "accessibility": "<p>Accessible pour tous<\/p>",
       "latitude": "48.470945,",
@@ -197,11 +211,13 @@
       "text": "<p>La maison feu, tout comme un phare, sert \u00e0 guider les navires.<br \/>En 1897, un premier feu directionnel blanc et rouge est construit en pignon d&rsquo;un petit b\u00e2timent rectangulaire peint en blanc.<br \/>La maison des gardiens est construite plus tard, en 1922.<br \/>Aujourd\u2019hui encore, il sert d\u2019amer le jour, et la nuit, c\u2019est un feu directionnel d\u2019une port\u00e9e de 25 milles.<\/p>",
       "text_plus": ""
     }
-  }],
-  "end": {
-    "title_end": "Merci de votre visite",
-    "title_end_breton": "Trugarez da vez\u00f1 deuet",
-    "text_end": "<p>Votre balade se termine. En esp\u00e9rant que vous ayez pass\u00e9 un agr\u00e9able moment \u00e0 la d\u00e9couverte du patrimoine de Lanildut\u00a0! A bient\u00f4t pour d\u00e9couvrir prochainement le nouveau parcours C\u00f4t\u00e9 terre.<\/p>",
-    "credits": "<p>Ce parcours d\u00e9couverte est une initiative de la municipalit\u00e9 de Lanildut.<br \/>Merci \u00e0 B\u00e9n\u00e9dicte&#8230;<\/p><p>Merci \u00e0 Jean-Fran\u00e7ois&#8230;<\/p><p>\u00e0 compl\u00e9ter<\/p>"
-  }
+  }, {
+    "id": 13,
+    "end": {
+      "title_end": "Merci de votre visite",
+      "title_end_breton": "Trugarez da vez\u00f1 deuet",
+      "text_end": "<p>Votre balade se termine. En esp\u00e9rant que vous ayez pass\u00e9 un agr\u00e9able moment \u00e0 la d\u00e9couverte du patrimoine de Lanildut\u00a0! A bient\u00f4t pour d\u00e9couvrir prochainement le nouveau parcours C\u00f4t\u00e9 terre.<\/p><p>Kenavo !<\/p>",
+      "credits": "<p style=\"text-align: center;\"><strong>Voix :</strong></p><p style=\"text-align: center;\">Narrateur : Jean-François SAEZ<br/>Colette Villou<br/>Jérôme Cabon<br/>Raymond Mellaza<br/>Bénédicte Chotard<br/>Jeanne Cabon<br/>Blandine Corlay</p><p style=\"text-align: center;\"><strong>Recherches et écriture :</strong></p><p style=\"text-align: center;\">Bénédicte Chotard</p><p style=\"text-align: center;\"><strong>Remerciements :</strong></p><p style=\"text-align: center;\">Jean Richarme et sa famille<br/>Charles Villou<br/>La famille de Yves Colin<br/>Le cercle d'histoire locale de Lanildut<br/>Jos Saliou<br/>Olivier Moal<br/>Gérard et Jeanine Million<br/>Jean Bars<br/>J-L Caradec<br/>Monsieur Kérébel<br/>Gildas Saouzenet<br/>La cinémathèque de Bretagne<br/>Le musée des Beaux Arts de Brest<br/>Le musée mémoire 39-45 de Plougonvelin<br/>La maison de l'algue<br/>Les gens de Seine à Paris,<br/>La maison des minéraux à Crozon,<br/>L'association familles rurales de Plouguin<br/>Victor Bouré,<br/>Annie Paul et Florence Tanguy pour leur écoute fidèle et soutien tout au long du projet<br/>Emmanuelle Paugam<br/>Youna et Elouan<br/>Claude Bechu</p><p style=\"text-align: center;\"><strong>Une réalisation :</strong></p><p style=\"text-align: center;\">Tydéo et KoalityContacts :  <a href=\"mailto:julien@tydeo.com\">julien@tydeo.com</a>  - <a href=\"mailto:contact@koality.fr\">contact@koality.fr</a></p>"
+    }
+  }]
 }

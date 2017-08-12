@@ -3,9 +3,6 @@ import { View, ScrollView, Text, TouchableOpacity, Modal } from 'react-native'
 import { connect } from 'react-redux'
 import Icon from 'react-native-vector-icons/FontAwesome'
 
-// Data
-import dataGame from '../Fixtures/game.json'
-
 // Styles
 import styles from './Styles/OrientationScreenStyle'
 
@@ -23,7 +20,7 @@ class OrientationScreen extends React.Component {
       showModal: false,
       showModalMap: false,
       contentModal: '',
-      currentDataByStep: dataGame.steps[this.props.count]
+      currentDataByStep: this.props.datacurrentstep
     }
   }
 
@@ -40,12 +37,19 @@ class OrientationScreen extends React.Component {
   render () {
     const { navigate } = this.props.navigation
     const currentDataByStep = this.state.currentDataByStep
+    /*
+    console.tron.display({
+      name: currentDataByStep.orientation.title,
+      preview: 'Orientation step ' + this.props.count
+    })
+    */
+
     return (
       <View style={styles.mainContainer}>
         <ScrollView style={styles.container} bounces={false}>
           <View style={styles.wrapperMap} >
             <StaticMap orientation={currentDataByStep.orientation} />
-            <Text style={styles.subtitle}>ETAPE : {this.props.count + 1} - {currentDataByStep.orientation.time}</Text>
+            <Text style={styles.subtitle}>ETAPE : {this.props.count} - {currentDataByStep.orientation.time}</Text>
           </View>
 
           <View style={styles.halfSection} >
@@ -80,8 +84,9 @@ class OrientationScreen extends React.Component {
             >
             <View
               style={styles.modalInfos}>
-              <Text style={styles.titleText}>Informations</Text>
+              <Text style={styles.titleTextModal}>Informations</Text>
               <View style={styles.containerHTMLViewModal}>
+                <Text style={styles.subtitle}>ETAPE : {this.props.count + 1} - {currentDataByStep.orientation.time}</Text>
                 <HTMLView
                   value={this.state.contentModal}
                   stylesheet={{textAlign: 'center'}}
@@ -115,7 +120,8 @@ class OrientationScreen extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    count: state.game.count
+    count: state.game.count,
+    datacurrentstep: state.game.datacurrentstep
   }
 }
 

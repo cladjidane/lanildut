@@ -29,6 +29,7 @@ class StaticMap extends React.Component {
         <MapView
           style={Styles.mapView}
           region={this.state.region}
+          mapType='satellite'
         >
           <MapView.Marker
             coordinate={this.state.region}

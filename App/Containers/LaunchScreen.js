@@ -41,12 +41,12 @@ export default class LaunchScreen extends React.Component {
         <ScrollView style={styles.launchContainer}>
           <View style={styles.launchHalfSectionPan} >
 
-            <Text style={styles.titleTextHome}>{dataGame.introduction.name_application}</Text>
-            <Text style={styles.subtitleHome}>{dataGame.introduction.title_home}</Text>
-            <Text style={styles.subtitleHome_breizh}>{dataGame.introduction.title_home_breton}</Text>
+            <Text style={styles.titleTextHome}>{dataGame.steps[0].introduction.name_application}</Text>
+            <Text style={styles.subtitleHome}>{dataGame.steps[0].introduction.title_home}</Text>
+            <Text style={styles.subtitleHome_breizh}>{dataGame.steps[0].introduction.title_home_breton}</Text>
             <View style={styles.containerHTMLView}>
               <HTMLView
-                value={dataGame.introduction.text_intro}
+                value={dataGame.steps[0].introduction.text_intro}
                 stylesheet={styles}
               />
             </View>

@@ -2,6 +2,8 @@ import { takeLatest } from 'redux-saga/effects'
 import API from '../Services/Api'
 import FixtureAPI from '../Services/FixtureApi'
 import DebugConfig from '../Config/DebugConfig'
+import NavigationActions from 'react-navigation'
+
 
 /* ------------- Types ------------- */
 
@@ -11,7 +13,7 @@ import { GameTypes } from '../Redux/GameRedux'
 /* ------------- Sagas ------------- */
 
 import { startup } from './StartupSagas'
-import { getGame } from './GameSagas'
+import { getGame, updateCurrentStep } from './GameSagas'
 
 /* ------------- API ------------- */
 
@@ -27,6 +29,8 @@ export default function * root () {
     takeLatest(StartupTypes.STARTUP, startup),
     // Ici on lance la fn du sous comp GameSagas.js qui va
     // fait un fetch sur l'API pour mettre à jour les donées
-    takeLatest(GameTypes.GAME_REQUEST, getGame, api)
+    takeLatest(GameTypes.GAME_REQUEST, getGame, api),
+    // Naivation intercept
+    takeLatest(NavigationActions.NavigationActions.BACK, updateCurrentStep, NavigationActions)
   ]
 }

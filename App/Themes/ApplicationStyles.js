@@ -38,6 +38,11 @@ const ApplicationStyles = {
       margin: Metrics.section,
       padding: Metrics.baseMargin
     },
+    sectionMan: {
+      flex: 1,
+      padding: Metrics.baseMargin,
+      alignItems: 'center'
+    },
     halfSection: {
       flex: 0.5,
       padding: Metrics.baseMargin
@@ -61,6 +66,16 @@ const ApplicationStyles = {
       marginVertical: Metrics.smallMargin,
       paddingHorizontal: Metrics.doubleBaseMargin,
       textAlign: 'justify'
+    },
+    titleTextModal: {
+      ...Fonts.style.h2,
+      fontSize: 24,
+      color: Colors.red,
+      textAlign: 'center',
+      margin: Metrics.smallMargin,
+      marginTop: Metrics.doubleBaseMargin,
+      marginBottom: Metrics.doubleBaseMargin,
+      paddingHorizontal: Metrics.doubleBaseMargin - 5
     },
     subtitle: {
       color: Colors.snow,

@@ -15,9 +15,9 @@ StepScreen.navigationOptions = props => {
     headerTitleStyle: { color: '#fff' },
     headerTintColor: 'white',
     headerStyle: styles.headerOrientation,
-    title: 'Ecoutez',
+    title: 'Regardez la vidéo',
     headerBackTitle: null,
-    headerRight: <HeaderRight navigation={navigation} />
+    headerRight: null
   }
 }
 
